@@ -1,15 +1,13 @@
-from flask import Flask, jsonify, request, render_template
-from scripts.ApiFunctions import fromCampusPullSubjects, fromCoursePullSections, fromSectionPullDetails, fromSubjectPullCourses, fromSubjectPullSections, formatInputJson
+from flask import Flask, jsonify, request, render_template, Blueprint
+from app.api.scripts.ApiFunctions import fromCampusPullSubjects, fromCoursePullSections, fromSectionPullDetails, fromSubjectPullCourses, fromSubjectPullSections, formatInputJson
 
-#docker image build -t ubcApi .
+apiBP = Blueprint('api', __name__)
 
-app = Flask(__name__)
-
-@app.route('/')
+@apiBP.route('/')
 def home():
-    return 'Hello, World!'
+    return render_template('index.html')
 
-@app.route('/campusSubject', methods=["POST"])
+@apiBP.route('/campusSubjects', methods=["POST"])
 def campusSubject():
     inputJson = request.get_json(force=True)
     inputJson = formatInputJson(inputJson)
@@ -20,7 +18,7 @@ def campusSubject():
 
     return jsonify(dictToReturn)
 
-@app.route('/courseSections', methods=["POST"])
+@apiBP.route('/courseSections', methods=["POST"])
 def courseSections():
     inputJson = request.get_json(force=True)
     inputJson = formatInputJson(inputJson)
@@ -33,7 +31,7 @@ def courseSections():
 
     return jsonify(dictToReturn)
 
-@app.route('/sectionDetails', methods=["POST"])
+@apiBP.route('/sectionDetails', methods=["POST"])
 def sectionDetails():
     inputJson = request.get_json(force=True)
     inputJson = formatInputJson(inputJson)
@@ -47,7 +45,7 @@ def sectionDetails():
 
     return jsonify(dictToReturn)
     
-@app.route('/subjectCourses', methods=["POST"])
+@apiBP.route('/subjectCourses', methods=["POST"])
 def subjectCourse():
     inputJson = request.get_json(force=True)
     inputJson = formatInputJson(inputJson)
@@ -60,7 +58,7 @@ def subjectCourse():
 
     return jsonify(dictToReturn)
 
-@app.route('/subjectSections', methods=["POST"])
+@apiBP.route('/subjectSections', methods=["POST"])
 def subjectSections():
     inputJson = request.get_json(force=True)
     inputJson = formatInputJson(inputJson)
@@ -70,7 +68,3 @@ def subjectSections():
     )
 
     return jsonify(dictToReturn)
-
-
-if __name__ == '__main__':
-    app.run(debug=True, port=8000)

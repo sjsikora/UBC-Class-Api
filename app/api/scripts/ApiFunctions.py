@@ -1,7 +1,7 @@
 import requests
 import re
 import html
-from scripts.UtilFunctions import *
+from app.api.scripts.UtilFunctions import *
 
 def formatInputJson(inputJson: dict):
     deafultJson = {

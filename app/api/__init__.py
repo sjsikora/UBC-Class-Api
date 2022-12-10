@@ -1,11 +1,7 @@
-from flask import Flask, jsonify, request, render_template, Blueprint
+from flask import Flask, jsonify, request, Blueprint
 from app.api.scripts.ApiFunctions import fromCampusPullSubjects, fromCoursePullSections, fromSectionPullDetails, fromSubjectPullCourses, fromSubjectPullSections, formatInputJson
 
 apiBP = Blueprint('api', __name__)
-
-@apiBP.route('/')
-def home():
-    return render_template('index.html')
 
 @apiBP.route('/campusSubjects', methods=["POST"])
 def campusSubject():

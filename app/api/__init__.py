@@ -1,66 +1,91 @@
-from flask import Flask, jsonify, request, Blueprint
-from app.api.scripts.ApiFunctions import fromCampusPullSubjects, fromCoursePullSections, fromSectionPullDetails, fromSubjectPullCourses, fromSubjectPullSections, formatInputJson
+from flask import jsonify, Blueprint
+from app.api.scripts.ApiFunctions import fromCampusPullSubjects, fromCoursePullSections, fromSectionPullDetails, fromSubjectPullCourses, fromSubjectPullSections
 
 apiBP = Blueprint('api', __name__)
 
-@apiBP.route('/campusSubjects', methods=["POST"])
-def campusSubject():
-    inputJson = request.get_json(force=True)
-    inputJson = formatInputJson(inputJson)
+@apiBP.route('/campusSubjects/campus=<campus>', methods=["GET"])
+def campusSubject(campus: str):
 
     dictToReturn = fromCampusPullSubjects(
-        campus = inputJson['campus']
+        campus = campus
     )
 
     return jsonify(dictToReturn)
 
-@apiBP.route('/courseSections', methods=["POST"])
-def courseSections():
-    inputJson = request.get_json(force=True)
-    inputJson = formatInputJson(inputJson)
+@apiBP.route('/courseSections/campus=<campus>/subject=<subjectCode>/course=<courseCode>', methods=["GET"])
+def courseSections(campus: str, subjectCode: str, courseCode: str):
 
     dictToReturn = fromCoursePullSections(
-        subjectCode = inputJson['subjectCode'],
-        courseCode = inputJson['courseCode'],
-        campus = inputJson['campus'],
+        subjectCode = subjectCode,
+        courseCode = courseCode,
+        campus = campus,
     )
 
     return jsonify(dictToReturn)
 
-@apiBP.route('/sectionDetails', methods=["POST"])
-def sectionDetails():
-    inputJson = request.get_json(force=True)
-    inputJson = formatInputJson(inputJson)
+@apiBP.route('/courseSections/campus=<campus>/subject=<subjectCode>/course=<courseCode>/fullDetails', methods=["GET"])
+def courseSectionsFull(campus: str, subjectCode: str, courseCode: str):
+
+    dictToReturn = fromCoursePullSections(
+        subjectCode = subjectCode,
+        courseCode = courseCode,
+        campus = campus,
+        fulldetails= True
+    )
+
+    return jsonify(dictToReturn)
+
+@apiBP.route('/sectionDetails/campus=<campus>/subject=<subjectCode>/course=<courseCode>/section=<sectionCode>', methods=["GET"])
+def sectionDetails(campus: str, subjectCode: str, courseCode: str, sectionCode: str):
 
     dictToReturn = fromSectionPullDetails(
-        subjectCode = inputJson['subjectCode'],
-        courseCode = inputJson['courseCode'],
-        sectionCode = inputJson['sectionCode'],
-        campus = inputJson['campus']
+        subjectCode = subjectCode,
+        courseCode = courseCode,
+        sectionCode = sectionCode,
+        campus = campus
     )
 
     return jsonify(dictToReturn)
     
-@apiBP.route('/subjectCourses', methods=["POST"])
-def subjectCourse():
-    inputJson = request.get_json(force=True)
-    inputJson = formatInputJson(inputJson)
+@apiBP.route('/subjectCourses/campus=<campus>/subject=<subjectCode>', methods=["GET"])
+def subjectCourse(campus: str, subjectCode: str):
 
     dictToReturn = fromSubjectPullCourses(
-        subjectCode = inputJson['subjectCode'],
-        campus = inputJson['campus'],
-        fulldetails = inputJson['fullDetails']
+        campus = campus,
+        subjectCode = subjectCode,
+        fulldetails = False
     )
 
     return jsonify(dictToReturn)
 
-@apiBP.route('/subjectSections', methods=["POST"])
-def subjectSections():
-    inputJson = request.get_json(force=True)
-    inputJson = formatInputJson(inputJson)
+@apiBP.route('/subjectCourses/campus=<campus>/subject=<subjectCode>/fullDetails', methods=["GET"])
+def subjectCourseFull(campus: str, subjectCode: str):
+
+    dictToReturn = fromSubjectPullCourses(
+        campus = campus,
+        subjectCode = subjectCode,
+        fulldetails = True
+    )
+
+    return jsonify(dictToReturn)
+
+@apiBP.route('/subjectSections/campus=<campus>/subject=<subjectCode>', methods=["GET"])
+def subjectSections(campus: str, subjectCode: str):
 
     dictToReturn = fromSubjectPullSections(
-        subjectCode = inputJson['subjectCode']
+        campus = campus,
+        subjectCode = subjectCode
+    )
+
+    return jsonify(dictToReturn)
+
+@apiBP.route('/subjectSections/campus=<campus>/subject=<subjectCode>/fullDetails', methods=["GET"])
+def subjectSectionsFull(campus: str, subjectCode: str):
+
+    dictToReturn = fromSubjectPullSections(
+        campus = campus,
+        subjectCode = subjectCode,
+        fulldetails = True
     )
 
     return jsonify(dictToReturn)

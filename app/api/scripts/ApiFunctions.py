@@ -3,20 +3,7 @@ import re
 import html
 from app.api.scripts.UtilFunctions import *
 
-def formatInputJson(inputJson: dict):
-    deafultJson = {
-        'campus': 'UBCO',
-        'subjectCode': '',
-        'courseCode': '',
-        'sectionCode': '',
-        'fullDetails': False
-    }
-
-    deafultJson.update(inputJson)
-
-    return inputJson
-
-def fromCampusPullSubjects(campus='UBCO'):
+def fromCampusPullSubjects(campus):
 
     if campus == "UBCO":
         url = 'https://courses.students.ubc.ca/cs/courseschedule?tname=subj-all-departments&pname=subjarea&campuscd=UBCO'
@@ -69,7 +56,7 @@ def fromCampusPullSubjects(campus='UBCO'):
 
     return subjectJsonList
 
-def fromSubjectPullCourses(subjectCode, campus='UBCO', fulldetails = False):
+def fromSubjectPullCourses(subjectCode, campus, fulldetails = False):
 
     session = requests.session()
 
@@ -82,10 +69,14 @@ def fromSubjectPullCourses(subjectCode, campus='UBCO', fulldetails = False):
         return {
             'error': "Invaild Campus in function fromSubjectPullCourses."
         }
-
     
     urlHtml = html.unescape(session.get(url).text)
     courseHtmlList = findInstancesOfTextBetweenText(urlHtml, 'class=section', '</tr>')
+
+    if courseHtmlList == '':
+        return {
+            'error': f'Can not find course {subjectCode} in campus {campus}'
+        }
 
     courseJsonList = []
 
@@ -135,7 +126,7 @@ def fromSubjectPullCourses(subjectCode, campus='UBCO', fulldetails = False):
 
     return courseJsonList
 
-def fromSectionPullDetails(subjectCode, courseCode, sectionCode, campus='UBCO'):
+def fromSectionPullDetails(subjectCode, courseCode, sectionCode, campus):
 
     if campus == 'UBCO':
         url = f'https://courses.students.ubc.ca/cs/courseschedule?tname=subj-section&course={courseCode}&section={sectionCode}&campuscd=UBCO&dept={subjectCode}&pname=subjarea'
@@ -146,10 +137,25 @@ def fromSectionPullDetails(subjectCode, courseCode, sectionCode, campus='UBCO'):
         return {
             'error': "Invaild Campus in function fromSectionPullDetails."
         }
+
+
+    classSyllabusUrl: str = ''
+    classInstructor: list = ''
+    classBuilding: str = ''
+    classRoom: int = ''
+    classSeatsTotalRemaining: int = 0
+    classSeatsRegistered: int = 0
+    classSeatsGeneralRemaining: int = 0
+    classSeatsRestrictedRemaining: int = 0
+
     session = requests.session()
     sectionPageHtml = html.unescape(session.get(url).text)
 
-    sectionPageHtmlSplit = findTextBetweenText(sectionPageHtml, '</style>', '</table>\n\n\n')
+    if campus == 'UBCV':
+        sectionPageHtmlSplit = findTextBetweenText(sectionPageHtml, 'Save To Worklist</a>\n\n\n\n\n\n\n', '<b>Book Summary</b>')
+    else:
+        #COULD BE BAD!!!!!!!
+        sectionPageHtmlSplit = findTextBetweenText(sectionPageHtml, '</style>', '</table>\n')
 
     if sectionPageHtmlSplit == '':
         print(f"Invaild Course Combo: {subjectCode} {courseCode} {sectionCode} on campus {campus}")
@@ -158,10 +164,17 @@ def fromSectionPullDetails(subjectCode, courseCode, sectionCode, campus='UBCO'):
         }
 
     classSyllabusUrl = findTextBetweenText(sectionPageHtmlSplit, '<a href=', ' target="_blank" class="btn btn-primary btn-small pull-right">Outline/Syllabus</a>')
-    classBuilding = findInstancesOfTextBetweenText(sectionPageHtmlSplit, '<td>', '</td>')[8]
+    classBuilding = findInstancesOfTextBetweenText(sectionPageHtmlSplit, '<td>', '</td>')
+
+    if len(classBuilding) >= 9:
+        classBuilding = classBuilding[8]
+
 
     if classBuilding:
         classRoom = findTextBetweenText(sectionPageHtmlSplit, f'{classBuilding}</td><td>', '</td>')
+
+        if campus == 'UBCV':
+            classRoom = findTextBetweenText(classRoom, 'target="_blank">', '</a>')
 
     if "<td>Instructor:  </td><td>TBA</td>" in sectionPageHtmlSplit:
         classInstructor = 'TBA'
@@ -169,11 +182,16 @@ def fromSectionPullDetails(subjectCode, courseCode, sectionCode, campus='UBCO'):
         instructorUrl = findTextBetweenText(sectionPageHtmlSplit, '<td>Instructor:  </td><td><a href="', '">')
         classInstructor = findInstancesOfTextBetweenText(sectionPageHtmlSplit, f'<a href="{instructorUrl}">', '</a>')
 
-    sectionPageHtmlStrongTag = findInstancesOfTextBetweenText(sectionPageHtmlSplit, "<strong>", "</strong>")
-    classSeatsTotalRemaining = sectionPageHtmlStrongTag[1]
-    classSeatsRegistered = sectionPageHtmlStrongTag[2]
-    classSeatsGeneralRemaining = sectionPageHtmlStrongTag[3]
-    classSeatsRestrictedRemaining = sectionPageHtmlStrongTag[4]
+    if ('The remaining seats in this section are only available through a Standard Timetable (STT)' not in sectionPageHtmlSplit) and ('this section is blocked from registration.' not in sectionPageHtmlSplit):
+
+        sectionPageHtmlStrongTag = findInstancesOfTextBetweenText(sectionPageHtmlSplit, "<strong>", "</strong>")
+        i = sectionPageHtmlStrongTag.index("Seat Summary")
+
+        classSeatsTotalRemaining = sectionPageHtmlStrongTag[i+1]
+        classSeatsRegistered = sectionPageHtmlStrongTag[i+2]
+        classSeatsGeneralRemaining = sectionPageHtmlStrongTag[i+3]
+        classSeatsRestrictedRemaining = sectionPageHtmlStrongTag[i+4]
+
 
 
     classJson = {
@@ -190,7 +208,7 @@ def fromSectionPullDetails(subjectCode, courseCode, sectionCode, campus='UBCO'):
     return classJson
 
 
-def fromCoursePullSections(subjectCode, courseCode, campus='UBCO', fulldetails = False):
+def fromCoursePullSections(subjectCode, courseCode, campus, fulldetails = False):
     
     if campus == "UBCO":
         url = f'https://courses.students.ubc.ca/cs/courseschedule?tname=subj-course&course={courseCode}&campuscd=UBCO&dept={subjectCode}&pname=subjarea'
@@ -258,11 +276,6 @@ def fromCoursePullSections(subjectCode, courseCode, campus='UBCO', fulldetails =
             classStart = classTdtags[7].strip()
             classEnd = classTdtags[8].strip()
 
-
-            if classSection == 'COSC 301 101':
-                print("")
-                pass
-
             classComments = findTextBetweenText(classHtml, '<div class=\'accordion-inner\'>', '</p></div>')
             if classComments: 
                 classComments = re.sub('<[^>]+>', ' ', classComments)
@@ -296,17 +309,19 @@ def fromCoursePullSections(subjectCode, courseCode, campus='UBCO', fulldetails =
     return classJsonList
 
 
-def fromSubjectPullSections(subjectCode):
+def fromSubjectPullSections(subjectCode, campus, fulldetails= False):
 
-    coursesJson = fromSubjectPullCourses(subjectCode, fulldetails=True)
+    coursesJson = fromSubjectPullCourses(subjectCode, fulldetails=True, campus = campus)
 
     i = 0
     while(i < len(coursesJson)):
 
         courseCode = coursesJson[i]["code"].split(" ")[1]
-        sectionsJson = fromCoursePullSections(subjectCode, courseCode)
+        sectionsJson = fromCoursePullSections(subjectCode, courseCode, fulldetails=fulldetails, campus = campus)
         coursesJson[i]['sections'] = sectionsJson
 
         i+=1
 
     return coursesJson
+
+

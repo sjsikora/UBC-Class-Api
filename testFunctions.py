@@ -2,7 +2,7 @@ from app.api.scripts.ApiFunctions import fromCampusPullSubjects, fromCoursePullS
 import json
 
 
-c = fromSubjectPullSections('PHYS', campus='UBCO', fulldetails=True)
+c = fromSectionPullDetails('BIOC', '303', '001', 'UBCV')
 
 
 #Invaild Course Combo: PHYS 111 001 on campus UBCO

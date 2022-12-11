@@ -166,6 +166,7 @@ def fromSectionPullDetails(subjectCode, courseCode, sectionCode, campus):
     classSyllabusUrl = findTextBetweenText(sectionPageHtmlSplit, '<a href=', ' target="_blank" class="btn btn-primary btn-small pull-right">Outline/Syllabus</a>')
     classBuilding = findInstancesOfTextBetweenText(sectionPageHtmlSplit, '<td>', '</td>')
 
+    ########  FIX YEAR LONG COURSE!!!!!!!!!!
     if len(classBuilding) >= 9:
         classBuilding = classBuilding[8]
 

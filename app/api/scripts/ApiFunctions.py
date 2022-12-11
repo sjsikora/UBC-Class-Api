@@ -154,7 +154,6 @@ def fromSectionPullDetails(subjectCode, courseCode, sectionCode, campus):
     if campus == 'UBCV':
         sectionPageHtmlSplit = findTextBetweenText(sectionPageHtml, 'Save To Worklist</a>\n\n\n\n\n\n\n', '<b>Book Summary</b>')
     else:
-        #COULD BE BAD!!!!!!!
         sectionPageHtmlSplit = findTextBetweenText(sectionPageHtml, '</style>', '</table>\n')
 
     if sectionPageHtmlSplit == '':
@@ -164,6 +163,27 @@ def fromSectionPullDetails(subjectCode, courseCode, sectionCode, campus):
         }
 
     classSyllabusUrl = findTextBetweenText(sectionPageHtmlSplit, '<a href=', ' target="_blank" class="btn btn-primary btn-small pull-right">Outline/Syllabus</a>')
+
+    classSections = findTextBetweenText(sectionPageHtmlSplit, '<th>Room</th></tr></thead>', '</table>')
+    classSections = findInstancesOfTextBetweenText(classSections, '<td>', '</td>')
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     classBuilding = findInstancesOfTextBetweenText(sectionPageHtmlSplit, '<td>', '</td>')
 
     ########  FIX YEAR LONG COURSE!!!!!!!!!!

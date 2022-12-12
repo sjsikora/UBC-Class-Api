@@ -2,8 +2,14 @@ from app.api.scripts.ApiFunctions import fromCampusPullSubjects, fromCoursePullS
 import json
 
 
-c = fromSubjectPullSections('PHYS', 'UBCO', True)
 
 
-with open('temp.json', 'w') as f:
-    json.dump(c, f)
+
+subject = fromCampusPullSubjects('UBCO')
+
+for sub in subject
+    c = fromSubjectPullSections(sub["code"], 'UBCO', True)
+
+    with open(f'{sub["code"]}.json', 'w') as f:
+        json.dump(c, f)
+

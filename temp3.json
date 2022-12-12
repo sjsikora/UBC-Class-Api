@@ -1,0 +1,2936 @@
+[
+    {
+        "code": "BIOC 202",
+        "credits": 3.0,
+        "preReqs": "One of CHEM 203, CHEM 223, CHEM 233. ",
+        "description": "Introduction to proteins and enzymes, carbohydrate metabolism, and glucose homeostasis. The course emphasis is on human biochemistry and it is designed for students going into health science fields. Credit will be granted for only one of BIOC 202, BIOC 203 or BIOL 201.",
+        "title": "Introductory Medical Biochemistry",
+        "sections": [
+            {
+                "section": "BIOC 202 001",
+                "status": " ",
+                "activity": "Lecture",
+                "term": 1,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Mon",
+                    "Wed",
+                    "Fri"
+                ],
+                "start": "8:00",
+                "end": "9:00",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "BROWN, LINDSAY",
+                    "WILLIAMS, WARREN"
+                ],
+                "classSeatsTotalRemaining": "12",
+                "classSeatsRegistered": "148",
+                "classSeatsGeneralRemaining": "12",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "Friedman Building",
+                "room": "153"
+            },
+            {
+                "section": "BIOC 202 002",
+                "status": "Blocked",
+                "activity": "Lecture",
+                "term": 2,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Mon",
+                    "Wed",
+                    "Fri"
+                ],
+                "start": "10:00",
+                "end": "11:00",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "WILLIAMS, WARREN"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "Earth Sciences Building",
+                "room": "1013"
+            },
+            {
+                "section": "BIOC 202 003",
+                "status": "STT",
+                "activity": "Lecture",
+                "term": 2,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Tue",
+                    "Thu"
+                ],
+                "start": "8:30",
+                "end": "10:00",
+                "comments": "This section of BIOC202 is only for students in the Biomedical Engineering program.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "KRISINGER, MICHAEL"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "P. A. Woodward Instructional Resources Centre",
+                "room": "5"
+            },
+            {
+                "section": "BIOC 202 WL2",
+                "status": " ",
+                "activity": "Waiting List",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "Wait list for BIOC202.002 (term 2)  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": "73",
+                "classSeatsRegistered": "127",
+                "classSeatsGeneralRemaining": "73",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "No Scheduled Meeting",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 203",
+        "credits": 3.0,
+        "preReqs": "BIOL 200 and one of CHEM 203, CHEM 223. ",
+        "description": "Amino acids and proteins. Enzymes and enzymology. Human metabolic pathways. Structure, function and metabolism of carbohydrates including glycogen storage and gluconeogenesis. Restricted to students in Biochemistry specializations. Credit will be granted for only one of BIOC 202, BIOC 203 or BIOL 201.",
+        "title": "Fundamentals of Biochemistry",
+        "sections": [
+            {
+                "section": "BIOC 203 001",
+                "status": "Restricted",
+                "activity": "Lecture",
+                "term": 2,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    "Tue",
+                    "Thu"
+                ],
+                "start": "12:30",
+                "end": "14:00",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "BROWN, LINDSAY",
+                    "WILLIAMS, WARREN"
+                ],
+                "classSeatsTotalRemaining": "10",
+                "classSeatsRegistered": "152",
+                "classSeatsGeneralRemaining": "0",
+                "classSeatsRestrictedRemaining": "10",
+                "building": "West Mall Swing Space",
+                "room": "222"
+            },
+            {
+                "section": "BIOC 203 T01",
+                "status": "Full",
+                "activity": "Tutorial",
+                "term": 2,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Mon"
+                ],
+                "start": "10:00",
+                "end": "11:00",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "BROWN, LINDSAY",
+                    "WILLIAMS, WARREN"
+                ],
+                "classSeatsTotalRemaining": "0",
+                "classSeatsRegistered": "25",
+                "classSeatsGeneralRemaining": "0",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "P. A. Woodward Instructional Resources Centre",
+                "room": "B75"
+            },
+            {
+                "section": "BIOC 203 T02",
+                "status": "Full",
+                "activity": "Tutorial",
+                "term": 2,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Mon"
+                ],
+                "start": "14:00",
+                "end": "15:00",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "BROWN, LINDSAY",
+                    "WILLIAMS, WARREN"
+                ],
+                "classSeatsTotalRemaining": "0",
+                "classSeatsRegistered": "25",
+                "classSeatsGeneralRemaining": "0",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "Food, Nutrition and Health",
+                "room": "50"
+            },
+            {
+                "section": "BIOC 203 T03",
+                "status": "STT",
+                "activity": "Tutorial",
+                "term": 2,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Tue"
+                ],
+                "start": "9:30",
+                "end": "10:30",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "BROWN, LINDSAY",
+                    "WILLIAMS, WARREN"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "Civil and Mechanical Engineering",
+                "room": "1206"
+            },
+            {
+                "section": "BIOC 203 T04",
+                "status": "STT",
+                "activity": "Tutorial",
+                "term": 2,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Tue"
+                ],
+                "start": "10:30",
+                "end": "11:30",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "BROWN, LINDSAY",
+                    "WILLIAMS, WARREN"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "Civil and Mechanical Engineering",
+                "room": "1206"
+            },
+            {
+                "section": "BIOC 203 T05",
+                "status": "Full",
+                "activity": "Tutorial",
+                "term": 2,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    "Tue"
+                ],
+                "start": "11:30",
+                "end": "12:30",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "BROWN, LINDSAY",
+                    "WILLIAMS, WARREN"
+                ],
+                "classSeatsTotalRemaining": "0",
+                "classSeatsRegistered": "25",
+                "classSeatsGeneralRemaining": "0",
+                "classSeatsRestrictedRemaining": "0",
+                "building": " ",
+                "room": ""
+            },
+            {
+                "section": "BIOC 203 T06",
+                "status": " ",
+                "activity": "Tutorial",
+                "term": 2,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Wed"
+                ],
+                "start": "10:00",
+                "end": "11:00",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "BROWN, LINDSAY",
+                    "WILLIAMS, WARREN"
+                ],
+                "classSeatsTotalRemaining": "3",
+                "classSeatsRegistered": "22",
+                "classSeatsGeneralRemaining": "3",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "P. A. Woodward Instructional Resources Centre",
+                "room": "B75"
+            }
+        ]
+    },
+    {
+        "code": "BIOC 301",
+        "credits": 3.0,
+        "preReqs": "One of BIOC 300, BIOC 302, BIOC 303. ",
+        "description": "Techniques by which the chemical and physical properties of fundamental components of the cell are studied.",
+        "title": "Biochemistry Laboratory",
+        "sections": [
+            {
+                "section": "BIOC 301 001",
+                "status": "Full",
+                "activity": "Lecture-Laboratory",
+                "term": 3,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "comments": "Entry to this course is normally restricted to third year students in Biochemistry major and honours programs, who have completed appropriate 1st and 2nd year program requirements, and to Physiology, Pharmacology and Honours Biophysics students who have received approval for their programs.  The academic records of all students who register into the course will be checked and those not having an appropriate academic background for their designated specialization will be de-registered. Additionally, registration in co-requisite courses (Bioc 302 or Bioc 303) will be checked and any students not registered in the appropriate course may be removed from Bioc 301.No preference is given to 4th year students and, accordingly, direct registration is restricted to students with 3rd year standing in the Faculty of Science.  Eligible 4th year students needing to take the course should register into the wait-list section and contact the Biochemistry adviser (jaread@mail.ubc.ca) to request entry to the course.  Approved 4th year students will be registered by the department when their academic standing matches that of the incoming 3rd year class.  ",
+                "inPersonAttendance": true,
+                "syllabus": "http://www.biochem.ubc.ca/CourseMat.html",
+                "instructor": [
+                    "READ, JASON"
+                ],
+                "classSeatsTotalRemaining": "0",
+                "classSeatsRegistered": "153",
+                "classSeatsGeneralRemaining": "0",
+                "classSeatsRestrictedRemaining": "0",
+                "sectionTerms": [
+                    {
+                        "term": 2,
+                        "days": [
+                            "Tue"
+                        ],
+                        "start": "12:30",
+                        "end": "13:30",
+                        "building": "Friedman Building",
+                        "room": "153"
+                    },
+                    {
+                        "term": 1,
+                        "days": [
+                            "Tue"
+                        ],
+                        "start": "12:30",
+                        "end": "13:30",
+                        "building": "Friedman Building",
+                        "room": "153"
+                    }
+                ],
+                "timing": [
+                    {
+                        "Tue": {
+                            "start": "12:30",
+                            "end": "13:30"
+                        }
+                    },
+                    {
+                        "Tue": {
+                            "start": "12:30",
+                            "end": "13:30"
+                        }
+                    }
+                ]
+            },
+            {
+                "section": "BIOC 301 L01",
+                "status": "Restricted",
+                "activity": "Laboratory",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    "Tue"
+                ],
+                "start": "14:00",
+                "end": "17:00",
+                "comments": "Students who do not attend check-in may be de-registered from the course. Contact the instructor at 604-822-7582 (Email: jaread@mail.ubc.ca) if you are unable to attend.  ",
+                "inPersonAttendance": true,
+                "syllabus": "http://www.biochem.ubc.ca/CourseMat.html",
+                "instructor": [
+                    "READ, JASON"
+                ],
+                "classSeatsTotalRemaining": "1",
+                "classSeatsRegistered": "41",
+                "classSeatsGeneralRemaining": "0",
+                "classSeatsRestrictedRemaining": "1",
+                "building": " ",
+                "room": ""
+            },
+            {
+                "section": "BIOC 301 L02",
+                "status": "Full",
+                "activity": "Laboratory",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    "Wed"
+                ],
+                "start": "14:00",
+                "end": "17:00",
+                "comments": "Students who do not attend check-in may be de-registered from the course. Contact the instructor at 604-822-7582 (Email: jaread@interchange.ubc.ca) if you are unable to attend.  ",
+                "inPersonAttendance": true,
+                "syllabus": "http://www.biochem.ubc.ca/CourseMat.html",
+                "instructor": [
+                    "READ, JASON"
+                ],
+                "classSeatsTotalRemaining": "0",
+                "classSeatsRegistered": "38",
+                "classSeatsGeneralRemaining": "0",
+                "classSeatsRestrictedRemaining": "0",
+                "building": " ",
+                "room": ""
+            },
+            {
+                "section": "BIOC 301 L03",
+                "status": "Full",
+                "activity": "Laboratory",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    "Thu"
+                ],
+                "start": "14:00",
+                "end": "17:00",
+                "comments": "Students who do not attend check-in may be de-registered from the course. Contact the instructor at 604-822-7582 (Email: jaread@interchange.ubc.ca) if you are unable to attend.  ",
+                "inPersonAttendance": true,
+                "syllabus": "http://www.biochem.ubc.ca/CourseMat.html",
+                "instructor": [
+                    "READ, JASON"
+                ],
+                "classSeatsTotalRemaining": "0",
+                "classSeatsRegistered": "38",
+                "classSeatsGeneralRemaining": "0",
+                "classSeatsRestrictedRemaining": "0",
+                "building": " ",
+                "room": ""
+            },
+            {
+                "section": "BIOC 301 L04",
+                "status": "Full",
+                "activity": "Laboratory",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    "Fri"
+                ],
+                "start": "14:00",
+                "end": "17:00",
+                "comments": "Students who do not attend check-in may be de-registered from the course.  Contact the instructor at 604-822-7582 (Email: jaread@interchange.ubc.ca) if you are unable to attend.  ",
+                "inPersonAttendance": true,
+                "syllabus": "http://www.biochem.ubc.ca/CourseMat.html",
+                "instructor": [
+                    "READ, JASON"
+                ],
+                "classSeatsTotalRemaining": "0",
+                "classSeatsRegistered": "36",
+                "classSeatsGeneralRemaining": "0",
+                "classSeatsRestrictedRemaining": "0",
+                "building": " ",
+                "room": ""
+            },
+            {
+                "section": "BIOC 301 0W1",
+                "status": " ",
+                "activity": "Waiting List",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "Wait list for lab and lecture; students wanting to be considered for admission to the course should register into the wait list and contact the Biochemistry adviser (jaread@interchange.ubc.ca) to outline their reasons for wanting to take BIOC301.-  Wait listing does not guarantee placement in the course - please check the SSC periodically to determine if you have been moved into the course, and ensure that your Email address on the UBC system is up-to-date to receive Email announcements about the status of the wait list. Students with weak or deficient academic records, who have no probability of being placed in the course, will be de-registered from the wait list.  ",
+                "inPersonAttendance": true,
+                "syllabus": "http://www.biochem.ubc.ca/CourseMat.html",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": "49",
+                "classSeatsRegistered": "1",
+                "classSeatsGeneralRemaining": "49",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "No Scheduled Meeting",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 302",
+        "credits": 3.0,
+        "preReqs": "One of BIOL 201, BIOC 202, BIOC 203 and one of CHEM 203, CHEM 223, CHEM 233. ",
+        "description": "Metabolic reactions of lipids, steroids, amino acids and nucleotides; the biochemistry of replication, transcription and translation. Credit will be granted for only one of BIOC 302 or BIOC 303.",
+        "title": "General Biochemistry",
+        "sections": [
+            {
+                "section": "BIOC 302 102",
+                "status": " ",
+                "activity": "Lecture",
+                "term": 1,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Tue",
+                    "Thu"
+                ],
+                "start": "8:00",
+                "end": "9:30",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "FUSSNER-DUPAS, EDEN",
+                    "MUI, ALICE",
+                    "WILLIAMS, WARREN"
+                ],
+                "classSeatsTotalRemaining": "47",
+                "classSeatsRegistered": "143",
+                "classSeatsGeneralRemaining": "31",
+                "classSeatsRestrictedRemaining": "16",
+                "building": "Leonard S. Klinck",
+                "room": "200"
+            },
+            {
+                "section": "BIOC 302 T12",
+                "status": " ",
+                "activity": "Tutorial",
+                "term": 1,
+                "delivery": "Online                        ",
+                "interval": null,
+                "days": [
+                    "Mon"
+                ],
+                "start": "15:00",
+                "end": "16:00",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": "32",
+                "classSeatsRegistered": "68",
+                "classSeatsGeneralRemaining": "32",
+                "classSeatsRestrictedRemaining": "0",
+                "building": " ",
+                "room": ""
+            },
+            {
+                "section": "BIOC 302 T14",
+                "status": " ",
+                "activity": "Tutorial",
+                "term": 1,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Tue"
+                ],
+                "start": "11:00",
+                "end": "12:00",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": "29",
+                "classSeatsRegistered": "71",
+                "classSeatsGeneralRemaining": "29",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "Chemistry",
+                "room": "D200"
+            },
+            {
+                "section": "BIOC 302 1W1",
+                "status": " ",
+                "activity": "Waiting List",
+                "term": 1,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": "None",
+                "end": "None",
+                "comments": "Wait List for section 102 (Term 1).Wait listing does not guarantee placement in the course - you may check the SSC periodically, to determine if you have been moved into the course.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [],
+                "classSeatsTotalRemaining": "70",
+                "classSeatsRegistered": "0",
+                "classSeatsGeneralRemaining": "70",
+                "classSeatsRestrictedRemaining": "0",
+                "sectionTerms": []
+            },
+            {
+                "section": "BIOC 302 202",
+                "status": " ",
+                "activity": "Lecture",
+                "term": 2,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Mon",
+                    "Wed",
+                    "Fri"
+                ],
+                "start": "8:00",
+                "end": "9:00",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "FUSSNER-DUPAS, EDEN"
+                ],
+                "classSeatsTotalRemaining": "49",
+                "classSeatsRegistered": "251",
+                "classSeatsGeneralRemaining": "49",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "Wesbrook",
+                "room": "100"
+            },
+            {
+                "section": "BIOC 302 T53",
+                "status": " ",
+                "activity": "Tutorial",
+                "term": 2,
+                "delivery": "Online                        ",
+                "interval": null,
+                "days": [
+                    "Mon"
+                ],
+                "start": "15:00",
+                "end": "16:00",
+                "comments": "Tutorial for sect. 202  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": "15",
+                "classSeatsRegistered": "135",
+                "classSeatsGeneralRemaining": "15",
+                "classSeatsRestrictedRemaining": "0",
+                "building": " ",
+                "room": ""
+            },
+            {
+                "section": "BIOC 302 T57",
+                "status": " ",
+                "activity": "Tutorial",
+                "term": 2,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Tue"
+                ],
+                "start": "10:00",
+                "end": "11:00",
+                "comments": "Tutorial for sect. 201  and  202  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": "3",
+                "classSeatsRegistered": "97",
+                "classSeatsGeneralRemaining": "3",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "Centre for Interactive  Research on Sustainability",
+                "room": "1250"
+            },
+            {
+                "section": "BIOC 302 2W1",
+                "status": " ",
+                "activity": "Waiting List",
+                "term": 2,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": "None",
+                "end": "None",
+                "comments": "Wait List for section 202 (Term 2).Wait listing does not guarantee placement in the course - you may check the SSC periodically, to determine if you have been moved into the course.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [],
+                "classSeatsTotalRemaining": "48",
+                "classSeatsRegistered": "2",
+                "classSeatsGeneralRemaining": "48",
+                "classSeatsRestrictedRemaining": "0",
+                "sectionTerms": []
+            },
+            {
+                "section": "BIOC 302 T58",
+                "status": " ",
+                "activity": "Tutorial",
+                "term": 2,
+                "delivery": "Online                        ",
+                "interval": null,
+                "days": [
+                    "Wed"
+                ],
+                "start": "14:30",
+                "end": "15:30",
+                "comments": "Tutorial for BIOC 302 section 202  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": "140",
+                "classSeatsRegistered": "10",
+                "classSeatsGeneralRemaining": "140",
+                "classSeatsRestrictedRemaining": "0",
+                "building": " ",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 303",
+        "credits": 6.0,
+        "preReqs": "One of BIOC 203, BIOC 202, BIOL 201 and either (a) CHEM 213 or (b) all of CHEM 205, CHEM 233. ",
+        "description": "Structure, function and metabolism of lipids, steroids, amino acids and nucleotides; the biochemistry and molecular biology of replication, transcription, translation and gene regulation. For students in Biochemistry and Honours programs in other life sciences.  Credit will be granted for only one of BIOC 302 or BIOC 303.",
+        "title": "Molecular Biochemistry",
+        "sections": [
+            {
+                "section": "BIOC 303 001",
+                "status": "Full",
+                "activity": "Lecture",
+                "term": 3,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "DUONG VAN HOA, FRANCK",
+                    "HOWE, LEANN",
+                    "KRISINGER, MICHAEL",
+                    "MAYOR, THIBAULT",
+                    "TOKURIKI, NOBUHIKO"
+                ],
+                "classSeatsTotalRemaining": "0",
+                "classSeatsRegistered": "120",
+                "classSeatsGeneralRemaining": "0",
+                "classSeatsRestrictedRemaining": "0",
+                "sectionTerms": [
+                    {
+                        "term": 2,
+                        "days": [
+                            "Mon",
+                            "Wed",
+                            "Fri"
+                        ],
+                        "start": "13:00",
+                        "end": "14:00",
+                        "building": "Earth Sciences Building",
+                        "room": "1012"
+                    },
+                    {
+                        "term": 1,
+                        "days": [
+                            "Mon",
+                            "Wed",
+                            "Fri"
+                        ],
+                        "start": "13:00",
+                        "end": "14:00",
+                        "building": "Hennings",
+                        "room": "201"
+                    }
+                ],
+                "timing": [
+                    {
+                        "Mon": {
+                            "start": "13:00",
+                            "end": "14:00"
+                        }
+                    },
+                    {
+                        "Wed": {
+                            "start": "13:00",
+                            "end": "14:00"
+                        }
+                    },
+                    {
+                        "Fri": {
+                            "start": "13:00",
+                            "end": "14:00"
+                        }
+                    },
+                    {
+                        "Mon": {
+                            "start": "13:00",
+                            "end": "14:00"
+                        }
+                    },
+                    {
+                        "Wed": {
+                            "start": "13:00",
+                            "end": "14:00"
+                        }
+                    },
+                    {
+                        "Fri": {
+                            "start": "13:00",
+                            "end": "14:00"
+                        }
+                    }
+                ]
+            },
+            {
+                "section": "BIOC 303 01W",
+                "status": " ",
+                "activity": "Waiting List",
+                "term": 0,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": "24",
+                "classSeatsRegistered": "1",
+                "classSeatsGeneralRemaining": "24",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "No Scheduled Meeting",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 304",
+        "credits": 3.0,
+        "preReqs": "CHEM 213. ",
+        "description": "Exploration of the breadth and importance of biochemical research to present day challenges in medicine and biotechnology. Detailed experimental research case studies of novel biochemical methods used to address pressing and ongoing biochemical issues.",
+        "title": "Contemporary Biochemical Research",
+        "sections": [
+            {
+                "section": "BIOC 304 001",
+                "status": " ",
+                "activity": "Lecture",
+                "term": 2,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Tue",
+                    "Thu"
+                ],
+                "start": "11:00",
+                "end": "12:30",
+                "comments": "Web-oriented course.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "GREENBLATT, ETHAN",
+                    "KIM, HUGH",
+                    "TEVES, SHEILA",
+                    "YIP, CALVIN"
+                ],
+                "classSeatsTotalRemaining": "19",
+                "classSeatsRegistered": "106",
+                "classSeatsGeneralRemaining": "19",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "Chemistry",
+                "room": "D300"
+            }
+        ]
+    },
+    {
+        "code": "BIOC 398",
+        "credits": 3.0,
+        "preReqs": " (Completion of academic third year in Biochemistry major or honours program is required.)",
+        "description": "Approved and supervised technical work experience in an industrial or academic laboratory for three or four months. Technical report required. Restricted to students admitted to the Internship Program in Biochemistry and Molecular Biology.",
+        "title": "Internship Work Placement I",
+        "sections": [
+            {
+                "section": "BIOC 398 610",
+                "status": "Blocked",
+                "activity": "Work Placement",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "For Co-Op students only  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "No Scheduled Meeting",
+                "room": ""
+            },
+            {
+                "section": "BIOC 398 615",
+                "status": "Blocked",
+                "activity": "Work Placement",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "For Co-Op students only  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "No Scheduled Meeting",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 399",
+        "credits": 3.0,
+        "preReqs": "BIOC 398. ",
+        "description": "Approved and supervised technical work experience in an industrial or academic research setting for four months. Technical report required. Restricted to students admitted to the Internship Program in Biochemistry and Molecular Biology.",
+        "title": "Internship Work Placement II",
+        "sections": [
+            {
+                "section": "BIOC 399 610",
+                "status": "Blocked",
+                "activity": "Work Placement",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "For Co-Op students only  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "No Scheduled Meeting",
+                "room": ""
+            },
+            {
+                "section": "BIOC 399 615",
+                "status": "Blocked",
+                "activity": "Work Placement",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "For Co-Op students only  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "No Scheduled Meeting",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 402",
+        "credits": 3.0,
+        "preReqs": "One of BIOC 302, BIOC 303, BIOT 380. (A minimum standing of 65% is recommended in these courses.)",
+        "description": "Structural components of proteins, classification by primary, secondary and tertiary structure, protein chemistry and purification, peptide and protein synthesis by chemical means and three-dimensional structure determination using X-ray diffraction and NMR.",
+        "title": "Proteins: Structure and Function",
+        "sections": [
+            {
+                "section": "BIOC 402 101",
+                "status": " ",
+                "activity": "Lecture",
+                "term": 1,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Mon",
+                    "Wed",
+                    "Fri"
+                ],
+                "start": "9:00",
+                "end": "10:00",
+                "comments": "Tutorial sessions are held in LSC 1410.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "GSPONER, JOERG",
+                    "YIP, CALVIN"
+                ],
+                "classSeatsTotalRemaining": "37",
+                "classSeatsRegistered": "133",
+                "classSeatsGeneralRemaining": "37",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "P. A. Woodward Instructional Resources Centre",
+                "room": "6"
+            },
+            {
+                "section": "BIOC 402 T01",
+                "status": " ",
+                "activity": "Tutorial",
+                "term": 1,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Fri"
+                ],
+                "start": "14:00",
+                "end": "15:00",
+                "comments": "Held in LSI building room 1410  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": "38",
+                "classSeatsRegistered": "57",
+                "classSeatsGeneralRemaining": "38",
+                "classSeatsRestrictedRemaining": "0",
+                "building": " ",
+                "room": ""
+            },
+            {
+                "section": "BIOC 402 T02",
+                "status": " ",
+                "activity": "Tutorial",
+                "term": 1,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Fri"
+                ],
+                "start": "15:00",
+                "end": "16:00",
+                "comments": "Held in LSI building room 1410  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": "23",
+                "classSeatsRegistered": "72",
+                "classSeatsGeneralRemaining": "23",
+                "classSeatsRestrictedRemaining": "0",
+                "building": " ",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 403",
+        "credits": 3.0,
+        "preReqs": "BIOC 402. (A minimum standing of 65% is recommended.)",
+        "description": "Kinetic analysis, catalytic mechanisms, transition state stabilization and regulation of activity, strategies for active site characterization and case studies of well-documented enzyme systems. Credit will be granted for only one of BIOC 403, CHEM 413 or CHEM 569.",
+        "title": "Enzymology",
+        "sections": [
+            {
+                "section": "BIOC 403 00W",
+                "status": " ",
+                "activity": "Waiting List",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": "50",
+                "classSeatsRegistered": "0",
+                "classSeatsGeneralRemaining": "50",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "No Scheduled Meeting",
+                "room": ""
+            },
+            {
+                "section": "BIOC 403 201",
+                "status": " ",
+                "activity": "Lecture",
+                "term": 2,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Mon",
+                    "Wed",
+                    "Fri"
+                ],
+                "start": "9:00",
+                "end": "10:00",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "BROMME, DIETER",
+                    "PARKER, SETH",
+                    "STRYNADKA, NATALIE"
+                ],
+                "classSeatsTotalRemaining": "22",
+                "classSeatsRegistered": "38",
+                "classSeatsGeneralRemaining": "22",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "P. A. Woodward Instructional Resources Centre",
+                "room": "3"
+            }
+        ]
+    },
+    {
+        "code": "BIOC 404",
+        "credits": 3.0,
+        "preReqs": "",
+        "description": "Theory and application of classical and emerging technologies in biochemical research.  Emphasis on using primary literature and oral presentation skills.  Restricted to Honours students in Biochemistry or others with permission of the instructor.",
+        "title": "Biochemical Methods",
+        "sections": [
+            {
+                "section": "BIOC 404 001",
+                "status": "Restricted",
+                "activity": "Lecture",
+                "term": 3,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "COVEY, SCOTT",
+                    "MAYOR, THIBAULT",
+                    "MEASDAY, VIVIEN",
+                    "SUBRAMANIAM, SRIRAM",
+                    "VAN PETEGEM, FILIP"
+                ],
+                "classSeatsTotalRemaining": "36",
+                "classSeatsRegistered": "9",
+                "classSeatsGeneralRemaining": "0",
+                "classSeatsRestrictedRemaining": "36",
+                "sectionTerms": [
+                    {
+                        "term": 2,
+                        "days": [
+                            "Mon",
+                            "Fri"
+                        ],
+                        "start": "13:00",
+                        "end": "14:00",
+                        "building": "Food, Nutrition and Health",
+                        "room": "30"
+                    },
+                    {
+                        "term": 1,
+                        "days": [
+                            "Mon",
+                            "Fri"
+                        ],
+                        "start": "12:00",
+                        "end": "13:00",
+                        "building": "Biological Sciences",
+                        "room": "1012"
+                    }
+                ],
+                "timing": [
+                    {
+                        "Mon": {
+                            "start": "12:00",
+                            "end": "13:00"
+                        }
+                    },
+                    {
+                        "Fri": {
+                            "start": "12:00",
+                            "end": "13:00"
+                        }
+                    },
+                    {
+                        "Mon": {
+                            "start": "13:00",
+                            "end": "14:00"
+                        }
+                    },
+                    {
+                        "Fri": {
+                            "start": "13:00",
+                            "end": "14:00"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "code": "BIOC 410",
+        "credits": 3.0,
+        "preReqs": "Either (a) all of BIOC 303, BIOL 335 or (b) BIOT 380. (A minimum standing of 65% is recommended in these courses.)",
+        "description": "Chemical, physical and biological properties of nucleic acids and their role in replication, transcription, translation and regulation of expression of genetic material. Credit will be granted for only one of BIOC 410 or BIOC 510.",
+        "title": "Nucleic Acids-Structure and Function",
+        "sections": [
+            {
+                "section": "BIOC 410 101",
+                "status": " ",
+                "activity": "Lecture",
+                "term": 1,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Mon",
+                    "Wed",
+                    "Fri"
+                ],
+                "start": "13:00",
+                "end": "14:00",
+                "comments": "Tutorial sessions are held in LSI room 1510  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "CIERNIA, ANNIE",
+                    "JAN, ERIC",
+                    "SADOWSKI, IVAN"
+                ],
+                "classSeatsTotalRemaining": "63",
+                "classSeatsRegistered": "92",
+                "classSeatsGeneralRemaining": "63",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "Wesbrook",
+                "room": "201"
+            },
+            {
+                "section": "BIOC 410 T01",
+                "status": "Blocked",
+                "activity": "Tutorial",
+                "term": 1,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    "Fri"
+                ],
+                "start": "15:00",
+                "end": "16:00",
+                "comments": "BIOC410 tutorial.  Held in LSI building, room 1510.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": " ",
+                "room": ""
+            },
+            {
+                "section": "BIOC 410 T02",
+                "status": "Blocked",
+                "activity": "Tutorial",
+                "term": 1,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    "Fri"
+                ],
+                "start": "14:00",
+                "end": "15:00",
+                "comments": "BIOC410 tutorial.  Held in LSI building, room 1510.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": " ",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 420",
+        "credits": 3.0,
+        "preReqs": "One of BIOC 404, FSCT 480. ",
+        "description": "Multi-week experiments in areas of contemporary biochemistry research using classical and modern techniques.  Emphasis on experimental design, technique, critical analysis of data, and scientific communication skills.  Restricted to Honours students in Biochemistry and others with permission of the instructor.",
+        "title": "Advanced Biochemical Techniques",
+        "sections": [
+            {
+                "section": "BIOC 420 101",
+                "status": " ",
+                "activity": "Laboratory",
+                "term": 1,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Tue"
+                ],
+                "start": "8:30",
+                "end": "17:30",
+                "comments": "This section is for students in the honours forensics specialization.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "COVEY, SCOTT"
+                ],
+                "classSeatsTotalRemaining": "53",
+                "classSeatsRegistered": "7",
+                "classSeatsGeneralRemaining": "29",
+                "classSeatsRestrictedRemaining": "24",
+                "building": "Biological Sciences",
+                "room": "3018"
+            },
+            {
+                "section": "BIOC 420 102",
+                "status": " ",
+                "activity": "Laboratory",
+                "term": 1,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Thu"
+                ],
+                "start": "8:30",
+                "end": "17:30",
+                "comments": "This section is for biochemistry students in the honours specializations.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "COVEY, SCOTT"
+                ],
+                "classSeatsTotalRemaining": "16",
+                "classSeatsRegistered": "4",
+                "classSeatsGeneralRemaining": "10",
+                "classSeatsRestrictedRemaining": "6",
+                "building": "Biological Sciences",
+                "room": "3018"
+            }
+        ]
+    },
+    {
+        "code": "BIOC 421",
+        "credits": 3.0,
+        "preReqs": "All of BIOC 301, BIOC 410. ",
+        "description": "Multi-week experiments involving contemporary nucleic acid research, cloning and recombinant protein engineering. Emphasis is on experimental design, critical analysis of data and scientific communication skills.  Restricted to Major students in Biochemistry.",
+        "title": "Recombinant DNA Techniques",
+        "sections": [
+            {
+                "section": "BIOC 421 201",
+                "status": "Full",
+                "activity": "Laboratory",
+                "term": 2,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Tue"
+                ],
+                "start": "13:00",
+                "end": "17:00",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "COVEY, SCOTT"
+                ],
+                "classSeatsTotalRemaining": "0",
+                "classSeatsRegistered": "12",
+                "classSeatsGeneralRemaining": "0",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "Biological Sciences",
+                "room": "3018"
+            },
+            {
+                "section": "BIOC 421 202",
+                "status": "Full",
+                "activity": "Laboratory",
+                "term": 2,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Thu"
+                ],
+                "start": "13:00",
+                "end": "17:00",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "COVEY, SCOTT"
+                ],
+                "classSeatsTotalRemaining": "0",
+                "classSeatsRegistered": "12",
+                "classSeatsGeneralRemaining": "0",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "Biological Sciences",
+                "room": "3018"
+            },
+            {
+                "section": "BIOC 421 203",
+                "status": "Full",
+                "activity": "Laboratory",
+                "term": 2,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Thu"
+                ],
+                "start": "8:30",
+                "end": "12:30",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "COVEY, SCOTT"
+                ],
+                "classSeatsTotalRemaining": "0",
+                "classSeatsRegistered": "12",
+                "classSeatsGeneralRemaining": "0",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "Biological Sciences",
+                "room": "3018"
+            },
+            {
+                "section": "BIOC 421 20W",
+                "status": " ",
+                "activity": "Waiting List",
+                "term": 2,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    "Tue"
+                ],
+                "start": "13:00",
+                "end": "17:00",
+                "comments": "Wait List for BIOC421  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "COVEY, SCOTT"
+                ],
+                "classSeatsTotalRemaining": "19",
+                "classSeatsRegistered": "1",
+                "classSeatsGeneralRemaining": "19",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "To Be Announced",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 440",
+        "credits": 3.0,
+        "preReqs": "One of BIOC 303, BIOT 380 and all of BIOC 402, BIOC 410. ",
+        "description": "Developing areas of molecular biology, focusing on experimental design and data analysis. Signal transduction, the use of model eukaryotes, and the regulation of gene expression.",
+        "title": "Concepts in Molecular Biology",
+        "sections": [
+            {
+                "section": "BIOC 440 001",
+                "status": "Blocked",
+                "activity": "Lecture",
+                "term": 2,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Tue",
+                    "Thu"
+                ],
+                "start": "9:30",
+                "end": "11:00",
+                "comments": "The lecture is held in LSC 1510.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "HOWE, LEANN",
+                    "JAN, ERIC",
+                    "SADOWSKI, IVAN"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": " ",
+                "room": ""
+            },
+            {
+                "section": "BIOC 440 00W",
+                "status": " ",
+                "activity": "Waiting List",
+                "term": 2,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": "None",
+                "end": "None",
+                "comments": "Waitlist for BIOC440  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [],
+                "classSeatsTotalRemaining": "15",
+                "classSeatsRegistered": "5",
+                "classSeatsGeneralRemaining": "15",
+                "classSeatsRestrictedRemaining": "0",
+                "sectionTerms": []
+            }
+        ]
+    },
+    {
+        "code": "BIOC 448A",
+        "credits": 3.0,
+        "preReqs": " (Permission of the Department Head is required.)",
+        "description": "A library (3 credits) or a laboratory project with written report (3 or 6 credits) allowing a student to undertake an investigation on a specific topic as agreed upon by the faculty and student.",
+        "title": "Directed Studies in Biochemistry - DIRECTED STUDIES",
+        "sections": [
+            {
+                "section": "BIOC 448A 101",
+                "status": "Blocked",
+                "activity": "Directed Studies",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "SEE DEPT ADVISOROpened in September only  ",
+                "inPersonAttendance": true,
+                "syllabus": "http://www.biochem.ubc.ca/Bioc448.html",
+                "instructor": [
+                    "BROWN, LINDSAY"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "No Scheduled Meeting",
+                "room": ""
+            },
+            {
+                "section": "BIOC 448A 201",
+                "status": "Blocked",
+                "activity": "Directed Studies",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "SEE DEPT ADVISOROpened in September only  ",
+                "inPersonAttendance": true,
+                "syllabus": "http://www.biochem.ubc.ca/Bioc448.html",
+                "instructor": [
+                    "BROWN, LINDSAY"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "No Scheduled Meeting",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 448B",
+        "credits": 6.0,
+        "preReqs": " (Permission of the Department Head is required.)",
+        "description": "A library (3 credits) or a laboratory project with written report (3 or 6 credits) allowing a student to undertake an investigation on a specific topic as agreed upon by the faculty and student.",
+        "title": "Directed Studies in Biochemistry - DIRECTED STUDIES",
+        "sections": [
+            {
+                "section": "BIOC 448B 001",
+                "status": "Blocked",
+                "activity": "Directed Studies",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "SEE DEPT ADVISOR Dr. Covey.  ",
+                "inPersonAttendance": true,
+                "syllabus": "http://www.biochem.ubc.ca/Bioc448.html",
+                "instructor": [
+                    "BROWN, LINDSAY"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "No Scheduled Meeting",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 449A",
+        "credits": 3.0,
+        "preReqs": "",
+        "description": "A research problem under the direction of a faculty member. Restricted to Honours students.",
+        "title": "Honours Thesis - HONOURS THESIS",
+        "sections": [
+            {
+                "section": "BIOC 449A 101",
+                "status": "Blocked",
+                "activity": "Thesis",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "http://www.biochem.ubc.ca/Bioc449.html",
+                "instructor": [
+                    "BROWN, LINDSAY"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "No Scheduled Meeting",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 449B",
+        "credits": 3.0,
+        "preReqs": "",
+        "description": "A research problem under the direction of a faculty member. Restricted to Honours students.",
+        "title": "Honours Thesis - HONOURS THESIS",
+        "sections": [
+            {
+                "section": "BIOC 449B 201",
+                "status": "Blocked",
+                "activity": "Thesis",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "http://www.biochem.ubc.ca/Bioc449.html",
+                "instructor": [
+                    "BROWN, LINDSAY"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "No Scheduled Meeting",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 449C",
+        "credits": 6.0,
+        "preReqs": "",
+        "description": "A research problem under the direction of a faculty member. Restricted to Honours students.",
+        "title": "Honours Thesis - HONOURS THESIS",
+        "sections": [
+            {
+                "section": "BIOC 449C 001",
+                "status": "Restricted",
+                "activity": "Thesis",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "http://www.biochem.ubc.ca/Bioc449.html",
+                "instructor": [
+                    "BROWN, LINDSAY"
+                ],
+                "classSeatsTotalRemaining": "12",
+                "classSeatsRegistered": "13",
+                "classSeatsGeneralRemaining": "0",
+                "classSeatsRestrictedRemaining": "12",
+                "building": "No Scheduled Meeting",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 450",
+        "credits": 3.0,
+        "preReqs": "One of BIOC 303, BIOT 380 and all of BIOC 402, BIOC 410. ",
+        "description": "Biochemistry of membranes and membrane proteins, membrane fusion, electrical signaling, and the involvement of membrane proteins in disease and drug development.",
+        "title": "Membrane Biochemistry",
+        "sections": [
+            {
+                "section": "BIOC 450 001",
+                "status": " ",
+                "activity": "Lecture",
+                "term": 2,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Mon",
+                    "Wed",
+                    "Fri"
+                ],
+                "start": "10:00",
+                "end": "11:00",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "CULLIS, PIETER",
+                    "MOLDAY, ROBERT",
+                    "NISLOW, COREY",
+                    "STRYNADKA, NATALIE",
+                    "VAN PETEGEM, FILIP"
+                ],
+                "classSeatsTotalRemaining": "1",
+                "classSeatsRegistered": "37",
+                "classSeatsGeneralRemaining": "1",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "Leonard S. Klinck",
+                "room": "460"
+            },
+            {
+                "section": "BIOC 450 00W",
+                "status": " ",
+                "activity": "Waiting List",
+                "term": 2,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": "None",
+                "end": "None",
+                "comments": "Waitlist for BIOC450  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [],
+                "classSeatsTotalRemaining": "40",
+                "classSeatsRegistered": "0",
+                "classSeatsGeneralRemaining": "40",
+                "classSeatsRestrictedRemaining": "0",
+                "sectionTerms": []
+            }
+        ]
+    },
+    {
+        "code": "BIOC 460",
+        "credits": 3.0,
+        "preReqs": "One of BIOC 303, BIOT 380 and all of BIOC 402, BIOC 410. ",
+        "description": "Theoretical basis and practical applications of a selection of advanced techniques currently used in biochemical research. Topics will vary.",
+        "title": "Advanced Techniques in Biochemistry",
+        "sections": [
+            {
+                "section": "BIOC 460 001",
+                "status": "Blocked",
+                "activity": "Lecture",
+                "term": 2,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Tue",
+                    "Thu"
+                ],
+                "start": "9:30",
+                "end": "11:00",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "DEDHAR, SHOUKAT",
+                    "FOSTER, LEONARD",
+                    "MUI, ALICE",
+                    "OVERALL, CHRISTOPHER MARK",
+                    "SUBRAMANIAM, SRIRAM",
+                    "TEVES, SHEILA"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "Food, Nutrition and Health",
+                "room": "30"
+            },
+            {
+                "section": "BIOC 460 00W",
+                "status": " ",
+                "activity": "Waiting List",
+                "term": 2,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": "None",
+                "end": "None",
+                "comments": "Waitlist for BIOC460  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [],
+                "classSeatsTotalRemaining": "37",
+                "classSeatsRegistered": "3",
+                "classSeatsGeneralRemaining": "37",
+                "classSeatsRestrictedRemaining": "0",
+                "sectionTerms": []
+            }
+        ]
+    },
+    {
+        "code": "BIOC 470",
+        "credits": 3.0,
+        "preReqs": "One of BIOC 302, BIOC 303. ",
+        "description": "Biochemical basis of select global challenges. Critical evaluation of primary literature to form evidence-based opinions and communicating biochemistry as it relates to several controversial societal issues.",
+        "title": "Biochemistry and Society: Current Issues",
+        "sections": [
+            {
+                "section": "BIOC 470 001",
+                "status": " ",
+                "activity": "Lecture",
+                "term": 2,
+                "delivery": "In-Person                     ",
+                "interval": null,
+                "days": [
+                    "Mon",
+                    "Fri"
+                ],
+                "start": "15:00",
+                "end": "17:00",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "BROWN, LINDSAY"
+                ],
+                "classSeatsTotalRemaining": "1",
+                "classSeatsRegistered": "54",
+                "classSeatsGeneralRemaining": "1",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "Hebb",
+                "room": "B112"
+            },
+            {
+                "section": "BIOC 470 00W",
+                "status": " ",
+                "activity": "Waiting List",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "Waitlist for BIOC 470  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": "34",
+                "classSeatsRegistered": "6",
+                "classSeatsGeneralRemaining": "34",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "No Scheduled Meeting",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 498",
+        "credits": 3.0,
+        "preReqs": "BIOC 399. ",
+        "description": "Approved and supervised technical work experience in an industrial or academic research setting for four months. Technical report required. Restricted to students admitted to the Internship Program in Biochemistry and Molecular Biology.",
+        "title": "Internship Work Placement III",
+        "sections": [
+            {
+                "section": "BIOC 498 610",
+                "status": "Blocked",
+                "activity": "Work Placement",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "For Co-Op students only  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "No Scheduled Meeting",
+                "room": ""
+            },
+            {
+                "section": "BIOC 498 615",
+                "status": "Blocked",
+                "activity": "Work Placement",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "For Co-Op students only  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "No Scheduled Meeting",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 499",
+        "credits": 3.0,
+        "preReqs": "BIOC 498. ",
+        "description": "Approved and supervised technical work experience in an industrial or academic research setting for four months. Technical report required. Restricted to students admitted to the Internship Program in Biochemistry and Molecular Biology.",
+        "title": "Internship Work Placement IV",
+        "sections": [
+            {
+                "section": "BIOC 499 610",
+                "status": "Blocked",
+                "activity": "Work Placement",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "For Co-Op students only  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "No Scheduled Meeting",
+                "room": ""
+            },
+            {
+                "section": "BIOC 499 615",
+                "status": "Blocked",
+                "activity": "Work Placement",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "For Co-Op students only  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "No Scheduled Meeting",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 501A",
+        "credits": 3.0,
+        "preReqs": "BIOC 404. ",
+        "description": "Practical applications of advanced biochemical techniques. Admission is limited and is by permission of the department head.",
+        "title": "Advanced Biochemistry Laboratory - ADV BIOC LAB",
+        "sections": [
+            {
+                "section": "BIOC 501A 102",
+                "status": "Restricted",
+                "activity": "Laboratory",
+                "term": 1,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    "Wed"
+                ],
+                "start": "8:30",
+                "end": "17:30",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "COVEY, SCOTT"
+                ],
+                "classSeatsTotalRemaining": "8",
+                "classSeatsRegistered": "0",
+                "classSeatsGeneralRemaining": "0",
+                "classSeatsRestrictedRemaining": "8",
+                "building": "Biological Sciences",
+                "room": "3018"
+            }
+        ]
+    },
+    {
+        "code": "BIOC 501B",
+        "credits": 3.0,
+        "preReqs": "BIOC 404. ",
+        "description": "Practical applications of advanced biochemical techniques. Admission is limited and is by permission of the department head.",
+        "title": "Advanced Biochemistry Laboratory - ADV BIOC LAB",
+        "sections": [
+            {
+                "section": "BIOC 501B 202",
+                "status": "Restricted",
+                "activity": "Laboratory",
+                "term": 2,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    "Wed"
+                ],
+                "start": "8:30",
+                "end": "17:30",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "COVEY, SCOTT"
+                ],
+                "classSeatsTotalRemaining": "6",
+                "classSeatsRegistered": "0",
+                "classSeatsGeneralRemaining": "0",
+                "classSeatsRestrictedRemaining": "6",
+                "building": "Biological Sciences",
+                "room": "3018"
+            }
+        ]
+    },
+    {
+        "code": "BIOC 530",
+        "credits": 3.0,
+        "preReqs": "ar class where Biochemistry graduate students present their thesis research. Students will receive a grade after presenting two seminars over a three term period. Students are also required to provide feedback for other presentations. Registration is restricted to Biochemistry graduate students. Any requests for exceptions should be sent to bioc.grad@ubc.ca. Students can't register for this course online but the graduate office will automatically registers any participants.",
+        "description": "Attendance is required of all graduate students in Biochemistry. Normally students will make a presentation once per year on a topic approved by their research advisor or committee or on the results of their research.",
+        "title": "Seminar in Biochemistry",
+        "sections": [
+            {
+                "section": "BIOC 530 001",
+                "status": "Blocked",
+                "activity": "Seminar",
+                "term": 3,
+                "delivery": "In-Person",
+                "interval": null,
+                "comments": "A weekly seminar class where Biochemistry graduate students present their thesis research. Students will receive a grade after presenting two seminars over a three term period. Students are also required to provide feedback for other presentations. Registration is restricted to Biochemistry graduate students. Any requests for exceptions should be sent to bioc.grad@ubc.ca. Students can't register for this course online but the graduate office will automatically registers any participants.  ",
+                "inPersonAttendance": true,
+                "syllabus": "http://www.biochem.ubc.ca/CourseMat.html",
+                "instructor": [
+                    "ELTIS, LINDSAY",
+                    "MOLDAY, ROBERT"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "sectionTerms": [
+                    {
+                        "term": 2,
+                        "days": [
+                            "Fri"
+                        ],
+                        "start": "12:00",
+                        "end": "13:00",
+                        "building": "P. A. Woodward Instructional Resources Centre",
+                        "room": "1"
+                    },
+                    {
+                        "term": 1,
+                        "days": [
+                            "Fri"
+                        ],
+                        "start": "12:00",
+                        "end": "13:00",
+                        "building": "P. A. Woodward Instructional Resources Centre",
+                        "room": "1"
+                    }
+                ],
+                "timing": [
+                    {
+                        "Fri": {
+                            "start": "12:00",
+                            "end": "13:00"
+                        }
+                    },
+                    {
+                        "Fri": {
+                            "start": "12:00",
+                            "end": "13:00"
+                        }
+                    }
+                ]
+            },
+            {
+                "section": "BIOC 530 101",
+                "status": "Blocked",
+                "activity": "Seminar",
+                "term": 1,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    "Fri"
+                ],
+                "start": "12:00",
+                "end": "13:00",
+                "comments": "A weekly seminar class where Biochemistry graduate students present their thesis research. Students will receive a grade after presenting two seminars over a three term period. Students are also required to provide feedback for other presentations. Registration is restricted to Biochemistry graduate students. Any requests for exceptions should be sent to bioc.grad@ubc.ca. Students can't register for this course online but the graduate office will automatically registers any participants.  ",
+                "inPersonAttendance": true,
+                "syllabus": "http://www.biochem.ubc.ca/CourseMat.html",
+                "instructor": [
+                    "ELTIS, LINDSAY",
+                    "MOLDAY, ROBERT"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "P. A. Woodward Instructional Resources Centre",
+                "room": "1"
+            },
+            {
+                "section": "BIOC 530 201",
+                "status": "Blocked",
+                "activity": "Seminar",
+                "term": 2,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    "Fri"
+                ],
+                "start": "12:00",
+                "end": "13:00",
+                "comments": "A weekly seminar class where Biochemistry graduate students present their thesis research. Students will receive a grade after presenting two seminars over a three term period. Students are also required to provide feedback for other presentations. Registration is restricted to Biochemistry graduate students. Any requests for exceptions should be sent to bioc.grad@ubc.ca. Students can't register for this course online but the graduate office will automatically registers any participants.  ",
+                "inPersonAttendance": true,
+                "syllabus": "http://www.biochem.ubc.ca/CourseMat.html",
+                "instructor": [
+                    "ELTIS, LINDSAY",
+                    "MOLDAY, ROBERT"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "P. A. Woodward Instructional Resources Centre",
+                "room": "1"
+            }
+        ]
+    },
+    {
+        "code": "BIOC 548A",
+        "credits": 2.0,
+        "preReqs": "",
+        "description": "In special cases, with approval of the department head, advanced courses may be arranged for graduate students in attendance.",
+        "title": "Directed Studies - DIRECTED STUDIES",
+        "sections": [
+            {
+                "section": "BIOC 548A 004",
+                "status": "Blocked",
+                "activity": "Directed Studies",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "No Scheduled Meeting",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 548B",
+        "credits": 3.0,
+        "preReqs": "",
+        "description": "In special cases, with approval of the department head, advanced courses may be arranged for graduate students in attendance.",
+        "title": "Directed Studies - DIRECTED STUDIES",
+        "sections": [
+            {
+                "section": "BIOC 548B 001",
+                "status": "Blocked",
+                "activity": "Directed Studies",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "No Scheduled Meeting",
+                "room": ""
+            },
+            {
+                "section": "BIOC 548B 101",
+                "status": "Blocked",
+                "activity": "Directed Studies",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "No Scheduled Meeting",
+                "room": ""
+            },
+            {
+                "section": "BIOC 548B 202",
+                "status": "Unreleased",
+                "activity": "Directed Studies",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": "0",
+                "classSeatsRegistered": "0",
+                "classSeatsGeneralRemaining": "0",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "No Scheduled Meeting",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 548C",
+        "credits": 4.0,
+        "preReqs": "",
+        "description": "In special cases, with approval of the department head, advanced courses may be arranged for graduate students in attendance.",
+        "title": "Directed Studies - DIRECTED STUDIES",
+        "sections": [
+            {
+                "section": "BIOC 548C 002",
+                "status": "Blocked",
+                "activity": "Directed Studies",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "No Scheduled Meeting",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 548D",
+        "credits": 6.0,
+        "preReqs": "",
+        "description": "In special cases, with approval of the department head, advanced courses may be arranged for graduate students in attendance.",
+        "title": "Directed Studies - DIRECTED STUDIES",
+        "sections": [
+            {
+                "section": "BIOC 548D 003",
+                "status": "Blocked",
+                "activity": "Directed Studies",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "No Scheduled Meeting",
+                "room": ""
+            },
+            {
+                "section": "BIOC 548D 202",
+                "status": "Unreleased",
+                "activity": "Directed Studies",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": "0",
+                "classSeatsRegistered": "0",
+                "classSeatsGeneralRemaining": "0",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "No Scheduled Meeting",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 549",
+        "credits": 18.0,
+        "preReqs": "s registration in term 1  and  term 2.",
+        "description": " ",
+        "title": "M.Sc. Thesis",
+        "sections": [
+            {
+                "section": "BIOC 549 001",
+                "status": " ",
+                "activity": "Thesis",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "Master's thesis registration in term 1  and  term 2.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": "58",
+                "classSeatsRegistered": "37",
+                "classSeatsGeneralRemaining": "13",
+                "classSeatsRestrictedRemaining": "45",
+                "building": "No Scheduled Meeting",
+                "room": ""
+            },
+            {
+                "section": "BIOC 549 101",
+                "status": " ",
+                "activity": "Thesis",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "Master's thesis, registration in term 1 only. For students planning to complete program in term 1.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": "12",
+                "classSeatsRegistered": "3",
+                "classSeatsGeneralRemaining": "12",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "No Scheduled Meeting",
+                "room": ""
+            },
+            {
+                "section": "BIOC 549 201",
+                "status": " ",
+                "activity": "Thesis",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "Master's thesis, registration in term 2 only. For students starting program in January.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": "4",
+                "classSeatsRegistered": "1",
+                "classSeatsGeneralRemaining": "4",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "No Scheduled Meeting",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 551",
+        "credits": 3.0,
+        "preReqs": "One of BIOC 410, BIOC 510. ",
+        "description": "Discussions based on topics in the current literature.",
+        "title": "Advanced Topics in Biochemistry and Molecular Biology",
+        "sections": [
+            {
+                "section": "BIOC 551 001",
+                "status": "Full",
+                "activity": "Lecture",
+                "term": 3,
+                "delivery": "In-Person",
+                "interval": null,
+                "comments": "Offered every year. Classes held in SPPH B108 in both Term 1 and Term 2 .  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "CIERNIA, ANNIE",
+                    "COVEY, SCOTT",
+                    "CULLIS, PIETER",
+                    "DEVINE, DANA VIRGINIA",
+                    "DUONG VAN HOA, FRANCK",
+                    "FINLAY, B BRETT",
+                    "GREENBLATT, ETHAN",
+                    "HIETER, PHILIP",
+                    "MAYOR, THIBAULT",
+                    "PARKER, SETH",
+                    "READ, JASON",
+                    "SUBRAMANIAM, SRIRAM",
+                    "TEVES, SHEILA"
+                ],
+                "classSeatsTotalRemaining": "0",
+                "classSeatsRegistered": "21",
+                "classSeatsGeneralRemaining": "0",
+                "classSeatsRestrictedRemaining": "0",
+                "sectionTerms": [
+                    {
+                        "term": 2,
+                        "days": [
+                            "Fri"
+                        ],
+                        "start": "9:30",
+                        "end": "11:00",
+                        "building": "School of Population and Public Health",
+                        "room": "B108"
+                    },
+                    {
+                        "term": 1,
+                        "days": [
+                            "Fri"
+                        ],
+                        "start": "9:30",
+                        "end": "11:00",
+                        "building": "School of Population and Public Health",
+                        "room": "B108"
+                    }
+                ],
+                "timing": [
+                    {
+                        "Fri": {
+                            "start": "9:30",
+                            "end": "11:00"
+                        }
+                    },
+                    {
+                        "Fri": {
+                            "start": "9:30",
+                            "end": "11:00"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "code": "BIOC 554",
+        "credits": 1.5,
+        "preReqs": "3W in LSC 1510. Not offered in 2022W.",
+        "description": "Mechanisms, regulation and dynamics of DNA and RNA biology. Structure and function of nucleic acids and their role in replication, transcription, translation and expression of genetic information.",
+        "title": "Nucleic Acids: DNA/RNA Structure and Function ",
+        "sections": [
+            {
+                "section": "BIOC 554 001",
+                "status": "Blocked",
+                "activity": "Lecture",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    "Mon",
+                    "Wed"
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "Offered in 2023W in LSC 1510. Not offered in 2022W.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TEVES, SHEILA"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "No Scheduled Meeting",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 555",
+        "credits": 1.5,
+        "preReqs": "3W in LSC 1510. Not offered in 2022W.",
+        "description": "Principles, regulation and dynamics of epigenetics.",
+        "title": "Epigenetics ",
+        "sections": [
+            {
+                "section": "BIOC 555 001",
+                "status": "Blocked",
+                "activity": "Lecture",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    "Mon",
+                    "Wed"
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "Offered in 2023W in LSC 1510. Not offered in 2022W.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "HOWE, LEANN"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": "No Scheduled Meeting",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 556",
+        "credits": 1.5,
+        "preReqs": "2W.  Not offered in 2023W. Classes held in ORCH 4002.",
+        "description": "Mechanisms involved in the responses of cells to adrenergic, steroid and peptide hormones and growth factors. Recent advances in approaches and regulation of the concentration and specific activity of key enzymes, transport systems and structural proteins. Given in alternate years.",
+        "title": "Biochemical Aspects of Cellular Regulation",
+        "sections": [
+            {
+                "section": "BIOC 556 001",
+                "status": " ",
+                "activity": "Lecture",
+                "term": 1,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    "Tue",
+                    "Thu"
+                ],
+                "start": "10:00",
+                "end": "11:30",
+                "comments": "Offered in 2022W.  Not offered in 2023W. Classes held in ORCH 4002.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "DEDHAR, SHOUKAT"
+                ],
+                "classSeatsTotalRemaining": "1",
+                "classSeatsRegistered": "17",
+                "classSeatsGeneralRemaining": "1",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "Orchard Commons",
+                "room": "4002"
+            }
+        ]
+    },
+    {
+        "code": "BIOC 557",
+        "credits": 1.5,
+        "preReqs": "2W. Not offered in 2023W.",
+        "description": "Advances in biochemical approaches. Topics vary.",
+        "title": "Advanced Topics in Biochemistry",
+        "sections": [
+            {
+                "section": "BIOC 557 001",
+                "status": " ",
+                "activity": "Lecture",
+                "term": 1,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    "Tue",
+                    "Thu"
+                ],
+                "start": "10:00",
+                "end": "11:30",
+                "comments": "Offered in 2022W. Not offered in 2023W.Classes held in MSL 237.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "FOSTER, LEONARD",
+                    "MAYOR, THIBAULT"
+                ],
+                "classSeatsTotalRemaining": "1",
+                "classSeatsRegistered": "13",
+                "classSeatsGeneralRemaining": "1",
+                "classSeatsRestrictedRemaining": "0",
+                "building": " ",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 558",
+        "credits": 1.5,
+        "preReqs": "2W.  Not offered in 2023W. Classes held in IRC B75.",
+        "description": "Contemporary theoretical and experimental investigation of protein structure-function relationships. Topics will vary.",
+        "title": "Advanced Topics in Protein Chemistry I",
+        "sections": [
+            {
+                "section": "BIOC 558 001",
+                "status": " ",
+                "activity": "Lecture",
+                "term": 1,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    "Tue",
+                    "Thu"
+                ],
+                "start": "15:30",
+                "end": "17:00",
+                "comments": "Offered in 2022W.  Not offered in 2023W. Classes held in IRC B75.Contemporary theoretical and experimental investigation of protein structure-function relationships: Biological X-ray crystallography.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "VAN PETEGEM, FILIP"
+                ],
+                "classSeatsTotalRemaining": "6",
+                "classSeatsRegistered": "12",
+                "classSeatsGeneralRemaining": "6",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "P. A. Woodward Instructional Resources Centre",
+                "room": "B75"
+            }
+        ]
+    },
+    {
+        "code": "BIOC 559",
+        "credits": 1.5,
+        "preReqs": "2W.  Not offered in 2023W. Classes held in Djavad Mowafaghian Centre for Brain Health, CBH 3402A.",
+        "description": "Contemporary theoretical and experimental investigation of protein structure-function relationships. Topics will vary.",
+        "title": "Advanced Topics in Protein Chemistry II",
+        "sections": [
+            {
+                "section": "BIOC 559 001",
+                "status": " ",
+                "activity": "Lecture",
+                "term": 1,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    "Tue",
+                    "Thu"
+                ],
+                "start": "15:30",
+                "end": "17:00",
+                "comments": "Offered in 2022W.  Not offered in 2023W. Classes held in Djavad Mowafaghian Centre for Brain Health, CBH 3402A.Contemporary theoretical and experimental investigation of protein structure-function relationships. Cryo-EM course.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "SUBRAMANIAM, SRIRAM"
+                ],
+                "classSeatsTotalRemaining": "4",
+                "classSeatsRegistered": "14",
+                "classSeatsGeneralRemaining": "4",
+                "classSeatsRestrictedRemaining": "0",
+                "building": " ",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 560B",
+        "credits": 1.5,
+        "preReqs": "2W in LSC 1330.",
+        "description": "Computational approaches to study protein and nucleic acids.",
+        "title": "Computational Approaches in Biochemistry - COMP BIOCHEM",
+        "sections": [
+            {
+                "section": "BIOC 560B 001",
+                "status": "Blocked",
+                "activity": "Lecture",
+                "term": 2,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    "Tue",
+                    "Thu"
+                ],
+                "start": "10:00",
+                "end": "11:30",
+                "comments": "Offered in 2022W in LSC 1330.Not offered in 2023W  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "CIERNIA, ANNIE",
+                    "FOSTER, LEONARD",
+                    "PARKER, SETH",
+                    "TOKURIKI, NOBUHIKO"
+                ],
+                "classSeatsTotalRemaining": 0,
+                "classSeatsRegistered": 0,
+                "classSeatsGeneralRemaining": 0,
+                "classSeatsRestrictedRemaining": 0,
+                "building": " ",
+                "room": ""
+            }
+        ]
+    },
+    {
+        "code": "BIOC 649",
+        "credits": 0.0,
+        "preReqs": "s course registration for term 1 and term 2.",
+        "description": " ",
+        "title": "Doctoral Dissertation",
+        "sections": [
+            {
+                "section": "BIOC 649 001",
+                "status": " ",
+                "activity": "Thesis",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "Doctoral thesis course registration for term 1 and term 2.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": "25",
+                "classSeatsRegistered": "45",
+                "classSeatsGeneralRemaining": "25",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "No Scheduled Meeting",
+                "room": ""
+            },
+            {
+                "section": "BIOC 649 101",
+                "status": " ",
+                "activity": "Thesis",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "Doctoral thesis course, term 1 only. Register in this section, if you plan to complete your program in term 1.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": "19",
+                "classSeatsRegistered": "6",
+                "classSeatsGeneralRemaining": "19",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "No Scheduled Meeting",
+                "room": ""
+            },
+            {
+                "section": "BIOC 649 201",
+                "status": " ",
+                "activity": "Thesis",
+                "term": 0,
+                "delivery": "In-Person",
+                "interval": null,
+                "days": [
+                    ""
+                ],
+                "start": " ",
+                "end": " ",
+                "comments": "Doctoral PhD thesis course, term 2 only. Register in the section, if you are starting in January.  ",
+                "inPersonAttendance": true,
+                "syllabus": "",
+                "instructor": [
+                    "TBA"
+                ],
+                "classSeatsTotalRemaining": "5",
+                "classSeatsRegistered": "0",
+                "classSeatsGeneralRemaining": "5",
+                "classSeatsRestrictedRemaining": "0",
+                "building": "No Scheduled Meeting",
+                "room": ""
+            }
+        ]
+    }
+]

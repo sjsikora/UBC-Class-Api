@@ -156,7 +156,7 @@ def fromSectionPullDetails(subjectCode, courseCode, sectionCode, campus):
     sectionStart: str = ''
     sectionEnd: str = ''
     sectionBuilding: str = ''
-    sectionRoom: int  = 0
+    sectionRoom: str  = ''
 
     classSyllabusUrl: str = ''
     classInstructor: list = []
@@ -190,6 +190,11 @@ def fromSectionPullDetails(subjectCode, courseCode, sectionCode, campus):
 
         sectionTerm = section[0].string
 
+        if sectionTerm.isdigit():
+            sectionTerm = int(sectionTerm)
+        else:
+            sectionTerm = 0
+
         sectionDays = str(section[1].string)
         sectionDays = sectionDays.split(' ')
         sectionDays.pop(0)
@@ -210,10 +215,10 @@ def fromSectionPullDetails(subjectCode, courseCode, sectionCode, campus):
         sectionJson = {
             "term": sectionTerm,
             "days": sectionDays,
-            "start": sectionStart,
-            "end": sectionEnd,
-            "building": sectionBuilding,
-            "room": sectionRoom
+            "start": str(sectionStart),
+            "end": str(sectionEnd),
+            "building": str(sectionBuilding),
+            "room": str(sectionRoom)
         }
 
         sectionJsonList += [sectionJson]
@@ -252,7 +257,7 @@ def fromSectionPullDetails(subjectCode, courseCode, sectionCode, campus):
         classSeatsRestrictedRemaining = strongTagString[i+4]
 
     classJson = {
-        "syllabus": classSyllabusUrl,
+        "syllabus": str(classSyllabusUrl),
         "instructor": classInstructor,
         "classSeatsTotalRemaining": classSeatsTotalRemaining,
         "classSeatsRegistered": classSeatsRegistered,
@@ -260,7 +265,7 @@ def fromSectionPullDetails(subjectCode, courseCode, sectionCode, campus):
         "classSeatsRestrictedRemaining": classSeatsRestrictedRemaining,
     }
 
-    if len(sectionJsonList) == 1:
+    if len(sectionJsonList) <= 1:
         classJson.update(sectionJsonList[0])
     else:
         classJson['sectionTerms'] = sectionJsonList
@@ -316,58 +321,139 @@ def fromCoursePullSections(subjectCode, courseCode, campus, fulldetails = False)
         classInfo = classHtml.find_all('td')
 
         classStatus = classInfo[0].string
-        classSection = classInfo[1].find('a').string
-        classActivity = classInfo[2].string
-        classTerm = classInfo[3].string
-        classDelivery = classInfo[4].string.strip()
-
-        classInterval = classInfo[5]
-
-        if classInterval:
-            classInterval = classInterval.string
-        else:
-            classInterval = ""
+        classSection = classInfo[1].find('a')
 
         classDays = str(classInfo[6].string)
         classDays = classDays.split(' ')
         classDays.pop(0)
 
-        classStart = classInfo[7].string
-        classEnd = classInfo[8].string
+        classStart = str(classInfo[7].string)
+        classEnd = str(classInfo[8].string)
+        classTerm = classInfo[3].string
+
+        classActivity = classInfo[2].string
+        classDelivery = classInfo[4].string
+        classInterval = classInfo[5].string
+
         classComments = classInfo[9]
-        classInPersonAttendance = classInfo[10].string.strip() == 'Yes'
+        classInPersonAttendance = str(classInfo[10].string).strip() == 'Yes'
 
         if classComments:
             classComments = classComments.get_text()
             classComments = classComments[20:]
+        else:
+            classComments = ''
 
         if len(classTerm) == 3:
             classTerm = 3
         else:
             classTerm = int(classTerm)
 
-        classJson = {
-            "section": classSection,
-            "status": classStatus,
-            "activity": classActivity,
-            "term": classTerm,
-            "delivery": classDelivery,
-            "interval": classInterval,
-            "days": classDays,
-            "start": classStart,
-            "end": classEnd,
-            "comments": classComments,
-            "inPersonAttendance": classInPersonAttendance
-        }
+        #If not classSection, then we have either a year long course, or a course with different days at the same time
+        if classSection:
 
-        classJsonToAdd = {}
-        if fulldetails:
-            classCodeDetails = classSection.split(' ')
-            classJsonToAdd = fromSectionPullDetails(classCodeDetails[0], classCodeDetails[1], classCodeDetails[2], campus)
-            classJson.update(classJsonToAdd)
+            classSection = classSection.string
 
-        classJsonList += [classJson]
-    
+            classJson = {
+                "section": classSection,
+                "status": classStatus,
+                "activity": classActivity,
+                "term": classTerm,
+                "delivery": classDelivery,
+                "interval": classInterval,
+                "days": classDays,
+                "start": classStart,
+                "end": classEnd,
+                "comments": classComments,
+                "inPersonAttendance": classInPersonAttendance
+            }
+
+            classJsonToAdd = {}
+            if fulldetails:
+                classCodeDetails = classSection.split(' ')
+                classJsonToAdd = fromSectionPullDetails(classCodeDetails[0], classCodeDetails[1], classCodeDetails[2], campus)
+                classJson.update(classJsonToAdd)
+
+            classJsonList += [classJson]
+        else:
+            if classJsonList[len(classJsonList) - 1]['term'] == classTerm:
+                timingList = []
+
+                days = classJsonList[len(classJsonList) - 1]['days']
+                start = classJsonList[len(classJsonList) - 1]['start']
+                end = classJsonList[len(classJsonList) - 1]['end']
+
+                del classJsonList[len(classJsonList) - 1]['days']
+                del classJsonList[len(classJsonList) - 1]['start']
+                del classJsonList[len(classJsonList) - 1]['end']
+
+                for day in days:
+                    timingJson = {
+                        day: {
+                            'start': start,
+                            'end': end
+                        }
+                    }
+                    timingList += [timingJson]
+                
+                for day in classDays:
+                    timingJson = {
+                        day: {
+                            'start': classStart,
+                            'end': classEnd
+                        }
+                    }
+
+                    timingList += [timingJson]
+                
+                classJsonList[len(classJsonList) - 1]['timing'] = timingList
+            #Same year courses
+            elif (classJsonList[len(classJsonList) - 1]['days'] == classDays) and (classJsonList[len(classJsonList) - 1]['start'] == classStart) and ((classJsonList[len(classJsonList) - 1]['end'] == classEnd)):
+                pass
+            else:
+                print("Class is offered diffferent days and/or times on different terms.")
+                timingList = []
+
+                term = classJsonList[len(classJsonList) - 1]['term']
+                days = classJsonList[len(classJsonList) - 1]['days']
+                start = classJsonList[len(classJsonList) - 1]['start']
+                end = classJsonList[len(classJsonList) - 1]['end']
+
+                classJsonList[len(classJsonList) - 1]['term'] = 3
+                del classJsonList[len(classJsonList) - 1]['days']
+                del classJsonList[len(classJsonList) - 1]['start']
+                del classJsonList[len(classJsonList) - 1]['end']
+
+                for day in days:
+                    JsonToPush = {}
+
+                    timingJson = {
+                        day: {
+                            'start': start,
+                            'end': end
+                        }
+                    }
+
+                    timingList += [JsonToPush]
+
+                JsonToPush[term] = timingList
+                    
+                
+                for day in classDays:
+                    timingJson = {
+                        day: {
+                            'start': classStart,
+                            'end': classEnd
+                        }
+                    }
+                    timingList += [JsonToPush]
+
+                JsonToPush[classTerm] = timingJson
+
+                classJsonList[len(classJsonList) - 1]['timing'] = JsonToPush
+
+
+                    
 
     return classJsonList
 

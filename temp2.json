@@ -5939,11 +5939,6 @@
                 "term": 2,
                 "delivery": "In-Person",
                 "interval": null,
-                "days": [
-                    "Mon"
-                ],
-                "start": "13:00",
-                "end": "14:30",
                 "comments": "Location: BC Cancer CentreFor MSc and PhD students only. Department permission is required for undergraduate students.  ",
                 "inPersonAttendance": true,
                 "syllabus": "",
@@ -5980,6 +5975,20 @@
                         "building": " ",
                         "room": ""
                     }
+                ],
+                "timing": [
+                    {
+                        "Mon": {
+                            "start": "13:00",
+                            "end": "14:30"
+                        }
+                    },
+                    {
+                        "Fri": {
+                            "start": "9:00",
+                            "end": "10:30"
+                        }
+                    }
                 ]
             }
         ]
@@ -5998,11 +6007,6 @@
                 "term": 2,
                 "delivery": "In-Person",
                 "interval": null,
-                "days": [
-                    "Mon"
-                ],
-                "start": "14:30",
-                "end": "16:00",
                 "comments": "Location: BC Cancer CentreFor MSc and PhD students only. Department permission is required for undergraduate students.  ",
                 "inPersonAttendance": true,
                 "syllabus": "",
@@ -6039,6 +6043,20 @@
                         "end": "16:00",
                         "building": " ",
                         "room": ""
+                    }
+                ],
+                "timing": [
+                    {
+                        "Mon": {
+                            "start": "14:30",
+                            "end": "16:00"
+                        }
+                    },
+                    {
+                        "Fri": {
+                            "start": "10:30",
+                            "end": "12:00"
+                        }
                     }
                 ]
             }

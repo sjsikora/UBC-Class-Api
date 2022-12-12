@@ -1,1 +1,268 @@
-{"syllabusUrl": "", "instructor": ["DUONG VAN HOA, FRANCK"], "building": "Hennings", "room": "201", "seatsTotalRemaining": "0", "seatsRegistered": "120", "seatsGeneralRemaining": "0", "seatsRestrictedRemaining": "0"}
+[
+    {
+        "code": "DATA 101",
+        "credits": 3.0,
+        "preReqs": "ered online",
+        "description": "Introduction to the techniques and software for handling real-world data. Topics include data cleaning, visualization, simulation, basic modelling, and prediction making.",
+        "title": "Making Predictions with Data"
+    },
+    {
+        "code": "DATA 301",
+        "credits": 3.0,
+        "preReqs": " (Either (a) third-year standing, or (b) one of COSC 111 or COSC 122)",
+        "description": "Techniques for computation, analysis, and visualization of data using software. Manipulation of small and large data sets. Automation using scripting. Real-world applications from life sciences, physical sciences, economics, engineering, or psychology. No prior computing background is required. Credit will be granted for only one of COSC 301, DATA 301 or DATA 501.",
+        "title": "Introduction to Data Analytics"
+    },
+    {
+        "code": "DATA 310",
+        "credits": 3.0,
+        "preReqs": "STAT 230 and MATH 221. ",
+        "description": "Theory and application of simple and multiple linear regression models, estimation, inference (confidence intervals, prediction intervals and hypothesis testing), polynomial regression, ANOVA and ANCOVA, variable selection, model adequacy and residual diagnostics.",
+        "title": "Applied Regression Analysis"
+    },
+    {
+        "code": "DATA 311",
+        "credits": 3.0,
+        "preReqs": "Either (a) STAT 230 or (b) a score more than 75% in one of APSC 254, BIOL 202, PSYO 373;  and one of COSC 111, APSC 177. ",
+        "description": "Regression, classification, resampling, model selection and validation, fundamental properties of matrices, dimension reduction, tree-based methods, unsupervised learning.",
+        "title": "Machine Learning"
+    },
+    {
+        "code": "DATA 315",
+        "credits": 3.0,
+        "preReqs": "STAT 230. ",
+        "description": "Trends, stationary and nonstationary time series models, forecasting, seasonal models.",
+        "title": "Applied Time Series and Forecasting"
+    },
+    {
+        "code": "DATA 405",
+        "credits": 3.0,
+        "preReqs": "A score of 60% or higher in STAT 230. ",
+        "description": "Pseudorandom number generation and testing.  Simulation and modelling of univariate and multivariate data; stochastic models, including Poisson processes and Markov chains; MCMC simulation, hidden Markov models, and queuing systems. Credit will be granted for only one of COSC 405, DATA 405, COSC 505, or DATA 505.",
+        "title": "Stochastic Modelling and Simulation "
+    },
+    {
+        "code": "DATA 407",
+        "credits": 3.0,
+        "preReqs": "One of STAT 230, PSYO 372, BIOL 202. ",
+        "description": "Planning/practice of data collection. Pros/cons of both observational and experimental data. Survey samples: random sampling; bias and variance; unequal probability sampling; systematic, multistage, and stratified sampling; ratio and regression estimators. Experimental design: simple one-way comparisons; designs with randomization restrictions including blocking, split-plots, nested and repeated measures designs. Credit will be granted for only one of DATA 407 or STAT 507.",
+        "title": "Sampling and Design"
+    },
+    {
+        "code": "DATA 410",
+        "credits": 3.0,
+        "preReqs": "All of MATH 221, STAT 303, DATA 311. ",
+        "description": "Regression, linear models, generalized linear models, additive models, generalized additive models, mixed models, theory and numerical performance.",
+        "title": "Regression and Generalized Linear Models"
+    },
+    {
+        "code": "DATA 419B",
+        "credits": 3.0,
+        "preReqs": " (Fourth-year standing.)",
+        "description": "Advanced or specialized topics in data science. Consult the department for the specific topic to be offered in any given year. This course may be taken more than once for credit with different topics.",
+        "title": "Topics in Data Science - TOPICS DATA SCIE"
+    },
+    {
+        "code": "DATA 448A",
+        "credits": 3.0,
+        "preReqs": " (Third-year standing in the Data Science major or Honours, and permission of the department head.)",
+        "description": "Investigation of a specific topic as agreed upon by the student and the faculty supervisor. Completion of a project and an oral presentation are required.",
+        "title": "Directed Studies in Data Science - DIR ST DATA SCIE"
+    },
+    {
+        "code": "DATA 448B",
+        "credits": 6.0,
+        "preReqs": " (Third-year standing in the Data Science major or Honours, and permission of the department head.)",
+        "description": "Investigation of a specific topic as agreed upon by the student and the faculty supervisor. Completion of a project and an oral presentation are required.",
+        "title": "Directed Studies in Data Science - DIR ST DATA SCIE"
+    },
+    {
+        "code": "DATA 448C",
+        "credits": 3.0,
+        "preReqs": " (Third-year standing in the Data Science major or Honours, and permission of the department head.)",
+        "description": "Investigation of a specific topic as agreed upon by the student and the faculty supervisor. Completion of a project and an oral presentation are required.",
+        "title": "Directed Studies in Data Science - DIR ST DATA SCIE"
+    },
+    {
+        "code": "DATA 449",
+        "credits": 6.0,
+        "preReqs": " (Fourth-year standing and permission of the department head.)",
+        "description": "Students will undertake a research project as agreed upon by the student, supervising faculty member, and unit head. A written thesis and a public presentation (poster or seminar) are required. Restricted to students in the B.Sc. Data Science Honours Program.",
+        "title": "Honours Thesis"
+    },
+    {
+        "code": "DATA 505",
+        "credits": 3.0,
+        "preReqs": "",
+        "description": "Simulation methodology: data collection, model design, output analysis, optimization, validation. Credit will be granted for only one of COSC 405, DATA 405, COSC 505, or DATA 505.",
+        "title": "Modelling and Simulation"
+    },
+    {
+        "code": "DATA 530",
+        "credits": 1.0,
+        "preReqs": "",
+        "description": "Introduction to software and tools for Data Science. Setup process. Restricted to students in the MDS program.",
+        "title": "Computing Platforms for Data Science"
+    },
+    {
+        "code": "DATA 531",
+        "credits": 1.0,
+        "preReqs": "",
+        "description": "Programming including decisions, loops, functions, and using data structures and libraries. Restricted to students in the MDS program.",
+        "title": "Programming for Data Science"
+    },
+    {
+        "code": "DATA 532",
+        "credits": 1.0,
+        "preReqs": "",
+        "description": "Data structures including lists, queues, stacks, hash tables, trees and graphs. Recursion. Searching and sorting. Asymptotic complexity. Restricted to students in the MDS program.",
+        "title": "Algorithms and Data Structure"
+    },
+    {
+        "code": "DATA 533",
+        "credits": 1.0,
+        "preReqs": "DATA 532. ",
+        "description": "Software life cycle. Licensing. Packaging. Testing and quality control. Version control. Collaborative environments. Restricted to students in the MDS program.",
+        "title": "Collaborative Software Development"
+    },
+    {
+        "code": "DATA 534",
+        "credits": 1.0,
+        "preReqs": "",
+        "description": "Parallel and cloud computing architectures and program deployment. Restricted to students in the MDS program.",
+        "title": "Web and Cloud Computing"
+    },
+    {
+        "code": "DATA 540",
+        "credits": 1.0,
+        "preReqs": "DATA 531. ",
+        "description": "Using and querying relational and NoSQL databases for analysis. Experience with SQL, JSON, and programs that use databases. Restricted to students in the MDS program.",
+        "title": "Databases and Data Retrieval"
+    },
+    {
+        "code": "DATA 541",
+        "credits": 1.0,
+        "preReqs": "",
+        "description": "Scripting engines for data science. Reporting tools. Automation. Restricted to students in the MDS program.",
+        "title": "Scripting and Reporting"
+    },
+    {
+        "code": "DATA 542",
+        "credits": 1.0,
+        "preReqs": "All of DATA 532, DATA 540, DATA 541. ",
+        "description": "Manipulation of data using software tools. Data conversion, filtering, sorting, grouping, cleaning, parsing. Automation. Restricted to students in the MDS program.",
+        "title": "Data Wrangling"
+    },
+    {
+        "code": "DATA 543",
+        "credits": 1.0,
+        "preReqs": "All of DATA 540, DATA 570. ",
+        "description": "Fundamental techniques in the collection of data. Focus will be devoted to understanding the effects of randomization, restrictions on randomization, repeated measures and blocking on the model fitting. Restricted to students in the MDS program.",
+        "title": "Data Collection"
+    },
+    {
+        "code": "DATA 550",
+        "credits": 1.0,
+        "preReqs": "All of DATA 530, DATA 531. ",
+        "description": "Data visualization to produce graphs and images. Advanced data analysis on spreadsheets. Restricted to students in the MDS program.",
+        "title": "Dataviz I"
+    },
+    {
+        "code": "DATA 551",
+        "credits": 1.0,
+        "preReqs": "All of DATA 534, DATA 543, DATA 550. ",
+        "description": "Data visualization using business intelligence and data analysis software. Interactive visualization. Production of visualizations for mobile and web. Restricted to students in the MDS program.",
+        "title": "Dataviz II"
+    },
+    {
+        "code": "DATA 552",
+        "credits": 1.0,
+        "preReqs": "",
+        "description": "Interpretation of data. Argumentation: hypothesis, claim, evidence and inference. Model limitations: bias, validity, reliability, sensitive analysis. Communication of recommendations to decision-makers. Restricted to students in the MDS program.",
+        "title": "Communication and Argumentation"
+    },
+    {
+        "code": "DATA 553",
+        "credits": 1.0,
+        "preReqs": "",
+        "description": "Data privacy laws and expectations. Freedom of information. Ethics board. Licensing. Data security. Restricted to students in the MDS program.",
+        "title": "Privacy, Security and Professional Ethics"
+    },
+    {
+        "code": "DATA 570",
+        "credits": 1.0,
+        "preReqs": "DATA 580. ",
+        "description": "Introduction to regression for Data Science. Simple linear regression, multiple linear regression, interactions, mixed variable types, model assessment, simple variable selection, k-nearest-neighbours regression. Restricted to students in the MDS program.",
+        "title": "Predictive Modelling"
+    },
+    {
+        "code": "DATA 571",
+        "credits": 1.0,
+        "preReqs": "DATA 570. ",
+        "description": "Resampling techniques and regularization for linear models. Bootstrap, jackknife, cross-validation, ridge regression, lasso, discussion of tuning parameters. Restricted to students in the MDS program.",
+        "title": "Resampling and Regularization"
+    },
+    {
+        "code": "DATA 572",
+        "credits": 1.0,
+        "preReqs": "DATA 571. ",
+        "description": "Analysis of data with categorical responses. Logistic regression, k-nearest-neighbours classification, discriminant analysis, decision trees and random forests. Restricted to students in the MDS program.",
+        "title": "Supervised Learning"
+    },
+    {
+        "code": "DATA 573",
+        "credits": 1.0,
+        "preReqs": "DATA 572. ",
+        "description": "Analyses for data with unknown responses. Distance measures, hierarchical clustering, k-means, mixture models. Restricted to students in the MDS program.",
+        "title": "Unsupervised and Semi-supervised Learning"
+    },
+    {
+        "code": "DATA 580",
+        "credits": 1.0,
+        "preReqs": "",
+        "description": "Pseudorandom number generation, testing and transformation to other discrete and continuous data types. Introduction to Poisson processes and the simulation of data from predictive models, as well as temporal and spatial models. Restricted to students in the MDS program.",
+        "title": "Modelling and Simulation I"
+    },
+    {
+        "code": "DATA 581",
+        "credits": 1.0,
+        "preReqs": "DATA 580. ",
+        "description": "Markov chains and their applications, for example, queueing and Markov Chain Monte Carlo. Restricted to students in the MDS program.",
+        "title": "Modelling and Simulation II"
+    },
+    {
+        "code": "DATA 582",
+        "credits": 1.0,
+        "preReqs": "All of DATA 572, DATA 581. ",
+        "description": "Introduction to Bayesian paradigm and tools for Data Science. Topics include Bayes theorem, prior, likelihood and posterior. A detailed analysis of the cases of binomial, normal samples, normal linear regression models. A significant focus will be on computational aspects of Bayesian problems using software packages. Restricted to students in the MDS program.",
+        "title": "Bayesian Inference"
+    },
+    {
+        "code": "DATA 583",
+        "credits": 1.0,
+        "preReqs": "All of DATA 572, DATA 581. ",
+        "description": "Splines. Smoothing. Generalized linear models. Generalized additive models. An introduction to mixed models. Restricted to students in the MDS program.",
+        "title": "Advanced Predictive Modelling"
+    },
+    {
+        "code": "DATA 585",
+        "credits": 1.0,
+        "preReqs": "DATA 580. ",
+        "description": "Modelling using mathematical programming. Fundamental continuous and discrete optimization algorithms. Optimization software for small to medium scale problems. Optimization algorithms for data science. Restricted to students in the MDS program.",
+        "title": "Optimization"
+    },
+    {
+        "code": "DATA 586",
+        "credits": 1.0,
+        "preReqs": "DATA 580. ",
+        "description": "Neural networks, backpropagation, deep learning. Restricted to students in the MDS program.",
+        "title": "Advanced Machine Learning"
+    },
+    {
+        "code": "DATA 589",
+        "credits": 1.0,
+        "preReqs": "DATA 543. ",
+        "description": "Advanced or specialized topic in Data Science with applications to specific data sets. Restricted to students in the MDS program.",
+        "title": "Special Topic"
+    }
+]

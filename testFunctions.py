@@ -2,15 +2,7 @@ from app.api.scripts.ApiFunctions import fromCampusPullSubjects, fromCoursePullS
 import json
 
 
-c = fromSectionPullDetails('BIOC', '303', '001', 'UBCV')
-
-
-#Invaild Course Combo: PHYS 111 001 on campus UBCO
-#Invaild Course Combo: PHYS 301 001 on campus UBCO
-#Invaild Course Combo: PHYS 304 001 on campus UBCO
-#Invaild Course Combo: PHYS 331 001 on campus UBCO
-
-#c = fromCoursePullSections('MATH', '100', 'UBCV', True)
+c = fromSubjectPullSections('PHYS', 'UBCO', True)
 
 
 with open('temp.json', 'w') as f:

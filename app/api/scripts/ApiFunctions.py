@@ -429,8 +429,9 @@ def fromCoursePullSections(subjectCode, courseCode, campus, fulldetails = False)
                     
                     classJsonList[len(classJsonList) - 1]['timing'] = timingList
                 #Same year courses
-                elif (classJsonList[len(classJsonList) - 1]['days'] == classDays) and (classJsonList[len(classJsonList) - 1]['start'] == classStart) and ((classJsonList[len(classJsonList) - 1]['end'] == classEnd)):
-                    pass
+                elif ('days' in classJsonList[len(classJsonList) - 1].keys()):
+                    if (classJsonList[len(classJsonList) - 1]['days'] == classDays) and (classJsonList[len(classJsonList) - 1]['start'] == classStart) and ((classJsonList[len(classJsonList) - 1]['end'] == classEnd)):
+                        pass
                 else:
                     print("Class is offered diffferent days and/or times on different terms.")
                     timingList = []

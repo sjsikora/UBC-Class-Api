@@ -1,6 +1,10 @@
 from flask import jsonify, Blueprint
 from app.api.scripts.ApiFunctions import fromCampusPullSubjects, fromCoursePullSections, fromSectionPullDetails, fromSubjectPullCourses, fromSubjectPullSections
 
+
+#FISH 500 001
+
+
 apiBP = Blueprint('api', __name__)
 
 @apiBP.route('/campusSubjects/campus=<campus>', methods=["GET"])

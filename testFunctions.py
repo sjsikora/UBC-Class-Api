@@ -3,11 +3,30 @@ import json
 
 
 
-subject = fromCampusPullSubjects('UBCO')
+subject = fromCampusPullSubjects('UBCV')
+
+codeList = []
 
 for sub in subject:
-    c = fromSubjectPullSections(sub["code"], 'UBCO', True)
+    codeList += [sub['code']]
 
-    with open(f'{sub["code"]}.json', 'w') as f:
+
+i = codeList.index('PHRM')
+
+codeList = codeList[i:]
+
+
+for code in codeList:
+    c = fromSubjectPullSections(code, 'UBCV', True)
+
+    with open(f'{code}V.json', 'w') as f:
         json.dump(c, f)
 
+
+
+
+#c = fromCoursePullSections("DHYG", "106", 'UBCV')
+
+
+#with open(f'BIOCV.json', 'w') as f:
+#    json.dump(c, f)

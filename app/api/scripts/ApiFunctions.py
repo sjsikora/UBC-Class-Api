@@ -185,45 +185,51 @@ def fromSectionPullDetails(subjectCode, courseCode, sectionCode, campus):
         sections = []
 
     sectionJsonList = []
+    instructorHtmlIndex = 1
 
     for section in sections:
 
         sectionTerm = section[0].string
 
-        if sectionTerm.isdigit():
-            sectionTerm = int(sectionTerm)
-        else:
-            sectionTerm = 0
+        if sectionTerm:
+            if sectionTerm.isdigit():
+                sectionTerm = int(sectionTerm)
+            else:
+                sectionTerm = 0
 
-        sectionDays = str(section[1].string)
-        sectionDays = sectionDays.split(' ')
-        sectionDays.pop(0)
+            instructorHtmlIndex = 2
 
-        sectionStart = section[2].string
-        sectionEnd = section[3].string
-        sectionBuilding = section[4].string
+            sectionDays = str(section[1].string)
+            sectionDays = sectionDays.split(' ')
+            sectionDays.pop(0)
 
-        sectionRoom = section[5]
-        if sectionRoom.find('a'):
-            sectionRoom = sectionRoom.find('a').string
-        elif sectionRoom.string:
-            sectionRoom = sectionRoom.string
-        else:
-            sectionRoom = ''
+    
+            sectionStart = section[2].string
+            sectionEnd = section[3].string
+            sectionBuilding = section[4].string
+
+            sectionRoom = section[5]
+            if sectionRoom.find('a'):
+                sectionRoom = sectionRoom.find('a').string
+            elif sectionRoom.string:
+                sectionRoom = sectionRoom.string
+            else:
+                sectionRoom = ''
 
 
-        sectionJson = {
-            "term": sectionTerm,
-            "days": sectionDays,
-            "start": str(sectionStart),
-            "end": str(sectionEnd),
-            "building": str(sectionBuilding),
-            "room": str(sectionRoom)
-        }
+            sectionJson = {
+                "term": sectionTerm,
+                "days": sectionDays,
+                "start": str(sectionStart),
+                "end": str(sectionEnd),
+                "building": str(sectionBuilding),
+                "room": str(sectionRoom)
+            }
+            
 
-        sectionJsonList += [sectionJson]
+            sectionJsonList += [sectionJson]
 
-    instructorsHtml = classHtmlTable[2].find_all('a')
+    instructorsHtml = classHtmlTable[instructorHtmlIndex].find_all('a')
 
     classInstructor = []
 
@@ -246,7 +252,7 @@ def fromSectionPullDetails(subjectCode, courseCode, sectionCode, campus):
         strongTag = strongTag.string
         strongTagString += [strongTag]
 
-        if ('Standard Timetable' in strongTag) or ('this section is blocked from registration.' in strongTag):
+        if ('Standard Timetable' in strongTag) or ('this section is blocked from registration.' in strongTag) or ('cancelled' in strongTag) or ("temp. unavailable" in strongTag):
             blockedSeats = True
 
     if not blockedSeats:
@@ -335,6 +341,11 @@ def fromCoursePullSections(subjectCode, courseCode, campus, fulldetails = False)
         classDelivery = classInfo[4].string.strip()
         classInterval = classInfo[5].string
 
+        if classInterval:
+            classInterval = classComments.get_text()
+        else:
+            classInterval = ''
+
         classComments = classInfo[9]
         classInPersonAttendance = str(classInfo[10].string).strip() == 'Yes'
 
@@ -346,6 +357,12 @@ def fromCoursePullSections(subjectCode, courseCode, campus, fulldetails = False)
 
         if len(classTerm) == 3:
             classTerm = 3
+        elif classTerm == 'X':
+            pass
+        elif classTerm == 'C':
+            pass
+        elif classTerm == 'A':
+            pass
         else:
             classTerm = int(classTerm)
 
@@ -376,83 +393,85 @@ def fromCoursePullSections(subjectCode, courseCode, campus, fulldetails = False)
 
             classJsonList += [classJson]
         else:
-            if classJsonList[len(classJsonList) - 1]['term'] == classTerm:
-                timingList = []
+            if not fulldetails:
+                if classJsonList[len(classJsonList) - 1]['term'] == classTerm and (classTerm != 3):
+                    timingList = []
 
-                days = classJsonList[len(classJsonList) - 1]['days']
-                start = classJsonList[len(classJsonList) - 1]['start']
-                end = classJsonList[len(classJsonList) - 1]['end']
+                    if 'days' in classJsonList[len(classJsonList) - 1].keys():
+                        days = classJsonList[len(classJsonList) - 1]['days']
+                        start = classJsonList[len(classJsonList) - 1]['start']
+                        end = classJsonList[len(classJsonList) - 1]['end']
 
-                del classJsonList[len(classJsonList) - 1]['days']
-                del classJsonList[len(classJsonList) - 1]['start']
-                del classJsonList[len(classJsonList) - 1]['end']
+                        del classJsonList[len(classJsonList) - 1]['days']
+                        del classJsonList[len(classJsonList) - 1]['start']
+                        del classJsonList[len(classJsonList) - 1]['end']
 
-                for day in days:
-                    timingJson = {
-                        day: {
-                            'start': start,
-                            'end': end
-                        }
-                    }
-                    timingList += [timingJson]
-                
-                for day in classDays:
-                    timingJson = {
-                        day: {
-                            'start': classStart,
-                            'end': classEnd
-                        }
-                    }
-
-                    timingList += [timingJson]
-                
-                classJsonList[len(classJsonList) - 1]['timing'] = timingList
-            #Same year courses
-            elif (classJsonList[len(classJsonList) - 1]['days'] == classDays) and (classJsonList[len(classJsonList) - 1]['start'] == classStart) and ((classJsonList[len(classJsonList) - 1]['end'] == classEnd)):
-                pass
-            else:
-                print("Class is offered diffferent days and/or times on different terms.")
-                timingList = []
-
-                term = classJsonList[len(classJsonList) - 1]['term']
-                days = classJsonList[len(classJsonList) - 1]['days']
-                start = classJsonList[len(classJsonList) - 1]['start']
-                end = classJsonList[len(classJsonList) - 1]['end']
-
-                classJsonList[len(classJsonList) - 1]['term'] = 3
-                del classJsonList[len(classJsonList) - 1]['days']
-                del classJsonList[len(classJsonList) - 1]['start']
-                del classJsonList[len(classJsonList) - 1]['end']
-
-                for day in days:
-                    JsonToPush = {}
-
-                    timingJson = {
-                        day: {
-                            'start': start,
-                            'end': end
-                        }
-                    }
-
-                    timingList += [JsonToPush]
-
-                JsonToPush[term] = timingList
+                        for day in days:
+                            timingJson = {
+                                day: {
+                                    'start': start,
+                                    'end': end
+                                }
+                            }
+                            timingList += [timingJson]
+                    else:
+                        timingList += [classJsonList[len(classJsonList) - 1]['timing']]
                     
-                
-                for day in classDays:
-                    timingJson = {
-                        day: {
-                            'start': classStart,
-                            'end': classEnd
+                    for day in classDays:
+                        timingJson = {
+                            day: {
+                                'start': classStart,
+                                'end': classEnd
+                            }
                         }
-                    }
-                    timingList += [JsonToPush]
 
-                JsonToPush[classTerm] = timingJson
+                        timingList += [timingJson]
+                    
+                    classJsonList[len(classJsonList) - 1]['timing'] = timingList
+                #Same year courses
+                elif (classJsonList[len(classJsonList) - 1]['days'] == classDays) and (classJsonList[len(classJsonList) - 1]['start'] == classStart) and ((classJsonList[len(classJsonList) - 1]['end'] == classEnd)):
+                    pass
+                else:
+                    print("Class is offered diffferent days and/or times on different terms.")
+                    timingList = []
 
-                classJsonList[len(classJsonList) - 1]['timing'] = JsonToPush
+                    term = classJsonList[len(classJsonList) - 1]['term']
+                    days = classJsonList[len(classJsonList) - 1]['days']
+                    start = classJsonList[len(classJsonList) - 1]['start']
+                    end = classJsonList[len(classJsonList) - 1]['end']
 
+                    classJsonList[len(classJsonList) - 1]['term'] = 3
+                    del classJsonList[len(classJsonList) - 1]['days']
+                    del classJsonList[len(classJsonList) - 1]['start']
+                    del classJsonList[len(classJsonList) - 1]['end']
 
+                    for day in days:
+                        JsonToPush = {}
+
+                        timingJson = {
+                            day: {
+                                'start': start,
+                                'end': end
+                            }
+                        }
+
+                        timingList += [JsonToPush]
+
+                    JsonToPush[term] = timingList
+                        
+                    
+                    for day in classDays:
+                        timingJson = {
+                            day: {
+                                'start': classStart,
+                                'end': classEnd
+                            }
+                        }
+                        timingList += [JsonToPush]
+
+                    JsonToPush[classTerm] = timingJson
+
+                    classJsonList[len(classJsonList) - 1]['timing'] = JsonToPush
                     
 
     return classJsonList

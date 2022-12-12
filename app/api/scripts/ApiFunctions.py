@@ -265,9 +265,9 @@ def fromSectionPullDetails(subjectCode, courseCode, sectionCode, campus):
         "classSeatsRestrictedRemaining": classSeatsRestrictedRemaining,
     }
 
-    if len(sectionJsonList) <= 1:
+    if len(sectionJsonList) == 1:
         classJson.update(sectionJsonList[0])
-    else:
+    elif len(sectionJsonList) > 1:
         classJson['sectionTerms'] = sectionJsonList
 
     return classJson
@@ -332,7 +332,7 @@ def fromCoursePullSections(subjectCode, courseCode, campus, fulldetails = False)
         classTerm = classInfo[3].string
 
         classActivity = classInfo[2].string
-        classDelivery = classInfo[4].string
+        classDelivery = classInfo[4].string.strip()
         classInterval = classInfo[5].string
 
         classComments = classInfo[9]

@@ -2,16 +2,31 @@ from app.api.scripts.ApiFunctions import fromCampusPullSubjects, fromCoursePullS
 import json
 
 
-c = fromSectionPullDetails('BIOC', '303', '001', 'UBCV')
+
+subject = fromCampusPullSubjects('UBCV')
+
+codeList = []
+
+for sub in subject:
+    codeList += [sub['code']]
 
 
-#Invaild Course Combo: PHYS 111 001 on campus UBCO
-#Invaild Course Combo: PHYS 301 001 on campus UBCO
-#Invaild Course Combo: PHYS 304 001 on campus UBCO
-#Invaild Course Combo: PHYS 331 001 on campus UBCO
+i = codeList.index('PHRM')
 
-#c = fromCoursePullSections('MATH', '100', 'UBCV', True)
+codeList = codeList[i:]
 
 
-with open('temp.json', 'w') as f:
-    json.dump(c, f)
+for code in codeList:
+    c = fromSubjectPullSections(code, 'UBCV', True)
+
+    with open(f'{code}V.json', 'w') as f:
+        json.dump(c, f)
+
+
+
+
+#c = fromCoursePullSections("DHYG", "106", 'UBCV')
+
+
+#with open(f'BIOCV.json', 'w') as f:
+#    json.dump(c, f)

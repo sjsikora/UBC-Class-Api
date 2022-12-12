@@ -2,6 +2,7 @@ import requests
 import re
 import html
 from app.api.scripts.UtilFunctions import *
+from bs4 import BeautifulSoup
 
 def fromCampusPullSubjects(campus):
 
@@ -16,34 +17,37 @@ def fromCampusPullSubjects(campus):
         }
 
     session = requests.session()
-    urlHtml = html.unescape(session.get(url).text)
-    subjectHtmlList = findInstancesOfTextBetweenText(urlHtml, 'class=section', '</tr>')
+    page = requests.get(url)
+    soup = BeautifulSoup(page.text, 'html.parser')
     session.close()
+
+
+    subjectsHtmlList = soup.find_all('tr')
+    subjectsHtmlList.pop(0)
+    
 
     subjectJsonList = []
 
-    for subjectHtml in subjectHtmlList:
+    for subjectHtml in subjectsHtmlList:
 
         subjectCode: str = ''
         subjectProperName: str = ''
         subjectFaculty: str = ''
-        subjectUrl: str = ''
         isOffered: bool = False
 
-        subjectCode = findTextBetweenText(subjectHtml, '<b>', '</b>')
+        tdTagsList = subjectHtml.find_all('td')
 
-        isOffered = subjectCode == ''
+        if len(tdTagsList) < 3:
+            return subjectJsonList
 
-        if isOffered:
-            subjectUrl = findTextBetweenText(subjectHtml, '<a href=', '>').strip()
-            subjectCode = findTextBetweenText(subjectHtml, f'{subjectUrl}>', '</a>').strip()
-            subjectUrl = "https://courses.students.ubc.ca" + subjectUrl
-        else:
+        subjectCode = tdTagsList[0].string
+        isOffered = '*' not in subjectCode
+
+        if not isOffered:
             subjectCode = subjectCode[:-2]
 
-        subjectProperName, subjectFaculty = findInstancesOfTextBetweenText(subjectHtml, '<td style="white-space: nowrap">', '</td>')
-        subjectProperName = subjectProperName.strip()
-        subjectFaculty = subjectFaculty.strip()
+        subjectProperName = tdTagsList[1].string.strip()
+        subjectFaculty = tdTagsList[2].string.strip()
 
         subjectJson = {
             "code": subjectCode,
@@ -58,8 +62,6 @@ def fromCampusPullSubjects(campus):
 
 def fromSubjectPullCourses(subjectCode, campus, fulldetails = False):
 
-    session = requests.session()
-
     if campus == "UBCO":
         url = f'https://courses.students.ubc.ca/cs/courseschedule?tname=subj-department&campuscd=UBCO&dept={subjectCode}&pname=subjarea'
     elif campus == 'UBCV':
@@ -69,11 +71,16 @@ def fromSubjectPullCourses(subjectCode, campus, fulldetails = False):
         return {
             'error': "Invaild Campus in function fromSubjectPullCourses."
         }
-    
-    urlHtml = html.unescape(session.get(url).text)
-    courseHtmlList = findInstancesOfTextBetweenText(urlHtml, 'class=section', '</tr>')
 
-    if courseHtmlList == '':
+    session = requests.session()
+    page = session.get(url)
+    soup = BeautifulSoup(page.text, 'html.parser')
+
+    courseHtmlList = soup.find_all('tr')
+    courseHtmlList.pop(0)
+
+    ## Recheck this -------------------------------------
+    if len(courseHtmlList) == 0:
         return {
             'error': f'Can not find course {subjectCode} in campus {campus}'
         }
@@ -88,31 +95,32 @@ def fromSubjectPullCourses(subjectCode, campus, fulldetails = False):
         courseDescription: str = ''
         courseTitle: str = ''
 
+        tdTags = courseHtml.find_all('td')
 
-        courseUrl = findTextBetweenText(courseHtml, '<a href=', '>').strip()
-        courseCode = findTextBetweenText(courseHtml, f'{courseUrl}>', '</a>').strip()
-        courseTitle = findTextBetweenText(courseHtml, '</td><td>', '</td></a>').strip()
+        if len(courseHtml) <= 1:
+            session.close()
+            return courseJsonList
+
+
+        courseCode = tdTags[0].string
+        courseTitle = tdTags[1].string
 
         if not fulldetails:
-
             courseJson = {
                 "code": courseCode,
                 "title": courseTitle
             }
-
         else:
-            classPageUrl = "https://courses.students.ubc.ca" + courseUrl
-            classPageHtml = html.unescape(session.get(classPageUrl).text)
-            session.close()
+            courseUrl = "https://courses.students.ubc.ca" + courseHtml.find('a').get('href')
+            coursePage = session.get(courseUrl)
+            courseSoup = BeautifulSoup(coursePage.text, 'html.parser')
 
-            coursePTags = findInstancesOfTextBetweenText(classPageHtml, '<p>', '</p>')
-            courseDescription = coursePTags[0]
-            courseCredits = float(coursePTags[1][9:])
-            coursePreReqs = findTextBetweenText(classPageHtml, '<p>Pre-reqs:', '</p>')
+            coursePTags = courseSoup.find_all('p')
 
-            if coursePreReqs != '':
-                coursePreReqs = re.sub('<[^>]+>', '', coursePreReqs)[5:]
-
+            courseDescription = coursePTags[0].string
+            courseCredits = float(coursePTags[1].string[9:])
+            coursePreReqs = str(coursePTags[2])
+            coursePreReqs = re.sub('<[^>]+>', '', coursePreReqs)[14:]
 
             courseJson = {
                 "code": courseCode,
@@ -124,6 +132,7 @@ def fromSubjectPullCourses(subjectCode, campus, fulldetails = False):
 
         courseJsonList += [courseJson]
 
+    session.close()
     return courseJsonList
 
 def fromSectionPullDetails(subjectCode, courseCode, sectionCode, campus):
@@ -138,93 +147,123 @@ def fromSectionPullDetails(subjectCode, courseCode, sectionCode, campus):
             'error': "Invaild Campus in function fromSectionPullDetails."
         }
 
+    page = requests.get(url)
+    soup = BeautifulSoup(page.text, 'html.parser')
+
+    #Per Section    
+    sectionTerm: int = 0
+    sectionDays: str = ''
+    sectionStart: str = ''
+    sectionEnd: str = ''
+    sectionBuilding: str = ''
+    sectionRoom: int  = 0
 
     classSyllabusUrl: str = ''
-    classInstructor: list = ''
-    classBuilding: str = ''
-    classRoom: int = ''
+    classInstructor: list = []
     classSeatsTotalRemaining: int = 0
     classSeatsRegistered: int = 0
     classSeatsGeneralRemaining: int = 0
     classSeatsRestrictedRemaining: int = 0
 
-    session = requests.session()
-    sectionPageHtml = html.unescape(session.get(url).text)
 
-    if campus == 'UBCV':
-        sectionPageHtmlSplit = findTextBetweenText(sectionPageHtml, 'Save To Worklist</a>\n\n\n\n\n\n\n', '<b>Book Summary</b>')
-    else:
-        sectionPageHtmlSplit = findTextBetweenText(sectionPageHtml, '</style>', '</table>\n')
+    classHtmlTable = soup.find_all('table')
 
-    if sectionPageHtmlSplit == '':
-        print(f"Invaild Course Combo: {subjectCode} {courseCode} {sectionCode} on campus {campus}")
+    if len(classHtmlTable) == 2:
+        print(f'ERROR: {courseCode} {sectionCode} {subjectCode} {campus} fromSectionPullDetails')
         return {
-            'error': f"Invaild Course Combo: {subjectCode} {courseCode} {sectionCode} on campus {campus}"
+            'error': f'Cant find {courseCode} {sectionCode} {subjectCode} {campus}'
         }
-
-    classSyllabusUrl = findTextBetweenText(sectionPageHtmlSplit, '<a href=', ' target="_blank" class="btn btn-primary btn-small pull-right">Outline/Syllabus</a>')
-
-    classSections = findTextBetweenText(sectionPageHtmlSplit, '<th>Room</th></tr></thead>', '</table>')
-    classSections = findInstancesOfTextBetweenText(classSections, '<td>', '</td>')
     
 
+    sectionInfo = classHtmlTable[1].find_all('td')
+
+    if len(sectionInfo) == 6:
+        sections = [sectionInfo]
+    elif len(sectionInfo) == 12:
+        sections = [sectionInfo[6:], sectionInfo[:6]]
+    else:
+        sections = []
+
+    sectionJsonList = []
+
+    for section in sections:
+
+        sectionTerm = section[0].string
+
+        sectionDays = str(section[1].string)
+        sectionDays = sectionDays.split(' ')
+        sectionDays.pop(0)
+
+        sectionStart = section[2].string
+        sectionEnd = section[3].string
+        sectionBuilding = section[4].string
+
+        sectionRoom = section[5]
+        if sectionRoom.find('a'):
+            sectionRoom = sectionRoom.find('a').string
+        elif sectionRoom.string:
+            sectionRoom = sectionRoom.string
+        else:
+            sectionRoom = ''
 
 
+        sectionJson = {
+            "term": sectionTerm,
+            "days": sectionDays,
+            "start": sectionStart,
+            "end": sectionEnd,
+            "building": sectionBuilding,
+            "room": sectionRoom
+        }
 
+        sectionJsonList += [sectionJson]
 
+    instructorsHtml = classHtmlTable[2].find_all('a')
 
+    classInstructor = []
 
+    if len(instructorsHtml) == 0:
+        if ("TBA" in classHtmlTable[2].text):
+            classInstructor = ['TBA']
+    else:
+        for instructorHtml in instructorsHtml:
+            classInstructor += [instructorHtml.string]
+    
+    for ATag in soup.find_all('a'):
+        if ATag.string == 'Outline/Syllabus':
+            classSyllabusUrl = ATag.get('href')
 
+    strongTags = soup.find_all('strong')
 
+    strongTagString = []
+    blockedSeats = False
+    for strongTag in strongTags:
+        strongTag = strongTag.string
+        strongTagString += [strongTag]
 
+        if ('Standard Timetable' in strongTag) or ('this section is blocked from registration.' in strongTag):
+            blockedSeats = True
 
-
-
-
-
-
-
-    classBuilding = findInstancesOfTextBetweenText(sectionPageHtmlSplit, '<td>', '</td>')
-
-    ########  FIX YEAR LONG COURSE!!!!!!!!!!
-    if len(classBuilding) >= 9:
-        classBuilding = classBuilding[8]
-
-
-    if classBuilding:
-        classRoom = findTextBetweenText(sectionPageHtmlSplit, f'{classBuilding}</td><td>', '</td>')
-
-        if campus == 'UBCV':
-            classRoom = findTextBetweenText(classRoom, 'target="_blank">', '</a>')
-
-    if "<td>Instructor:  </td><td>TBA</td>" in sectionPageHtmlSplit:
-        classInstructor = 'TBA'
-    elif "<td>Instructor:  </td><td><a href=" in sectionPageHtmlSplit:
-        instructorUrl = findTextBetweenText(sectionPageHtmlSplit, '<td>Instructor:  </td><td><a href="', '">')
-        classInstructor = findInstancesOfTextBetweenText(sectionPageHtmlSplit, f'<a href="{instructorUrl}">', '</a>')
-
-    if ('The remaining seats in this section are only available through a Standard Timetable (STT)' not in sectionPageHtmlSplit) and ('this section is blocked from registration.' not in sectionPageHtmlSplit):
-
-        sectionPageHtmlStrongTag = findInstancesOfTextBetweenText(sectionPageHtmlSplit, "<strong>", "</strong>")
-        i = sectionPageHtmlStrongTag.index("Seat Summary")
-
-        classSeatsTotalRemaining = sectionPageHtmlStrongTag[i+1]
-        classSeatsRegistered = sectionPageHtmlStrongTag[i+2]
-        classSeatsGeneralRemaining = sectionPageHtmlStrongTag[i+3]
-        classSeatsRestrictedRemaining = sectionPageHtmlStrongTag[i+4]
-
-
+    if not blockedSeats:
+        i = strongTagString.index('Seat Summary')
+        classSeatsTotalRemaining = strongTagString[i+1]
+        classSeatsRegistered = strongTagString[i+2]
+        classSeatsGeneralRemaining = strongTagString[i+3]
+        classSeatsRestrictedRemaining = strongTagString[i+4]
 
     classJson = {
-        "syllabusUrl": classSyllabusUrl,
+        "syllabus": classSyllabusUrl,
         "instructor": classInstructor,
-        "building": classBuilding,
-        "room": classRoom,
-        "seatsTotalRemaining": classSeatsTotalRemaining,
-        "seatsRegistered": classSeatsRegistered,
-        "seatsGeneralRemaining": classSeatsGeneralRemaining,
-        "seatsRestrictedRemaining": classSeatsRestrictedRemaining
+        "classSeatsTotalRemaining": classSeatsTotalRemaining,
+        "classSeatsRegistered": classSeatsRegistered,
+        "classSeatsGeneralRemaining": classSeatsGeneralRemaining,
+        "classSeatsRestrictedRemaining": classSeatsRestrictedRemaining,
     }
+
+    if len(sectionJsonList) == 1:
+        classJson.update(sectionJsonList[0])
+    else:
+        classJson['sectionTerms'] = sectionJsonList
 
     return classJson
 
@@ -241,16 +280,21 @@ def fromCoursePullSections(subjectCode, courseCode, campus, fulldetails = False)
             'error': "Invaild Campus in function fromCoursePullSections."
         }
 
-    session = requests.session()
-    classPageHtml = html.unescape(session.get(url).text)
-    classHtmlList = findInstancesOfTextBetweenText(classPageHtml, 'class=section', '</tr>')
-    session.close()
+    page = requests.get(url)
+    soup = BeautifulSoup(page.text, 'html.parser')
 
-    if len(classHtmlList) == 0:
+    mainHtml = soup.find_all('table')
+
+    if len(mainHtml) == 2:
         print(f"ERROR: Can not find {subjectCode} {courseCode} at campus {campus}")
         return {
             "error": f"ERROR: Can not find {subjectCode} {courseCode} at campus {campus}"
         }
+
+    mainHtml = mainHtml[1]
+
+    classHtmlList = mainHtml.find_all('tr')
+    classHtmlList.pop(0)
 
 
     classJsonList = []
@@ -268,44 +312,39 @@ def fromCoursePullSections(subjectCode, courseCode, campus, fulldetails = False)
         classEnd: str = ''
         classComments: str = ''
         classInPersonAttendance: bool = False
-        classJsonToAdd = {}
 
-        classUrl = findTextBetweenText(classHtml, '<a href=', 'onmouseover=').strip()
+        classInfo = classHtml.find_all('td')
 
-        if classUrl != '':
-            classSection = findTextBetweenText(classHtml, ',2000)">', '</a>').strip()
+        classStatus = classInfo[0].string
+        classSection = classInfo[1].find('a').string
+        classActivity = classInfo[2].string
+        classTerm = classInfo[3].string
+        classDelivery = classInfo[4].string.strip()
+
+        classInterval = classInfo[5]
+
+        if classInterval:
+            classInterval = classInterval.string
         else:
-            classUrl = findTextBetweenText(classHtml, '<a href=', '>').strip()
-            classSection = findTextBetweenText(classHtml, f'<a href={classUrl} >', '</a>').strip()
+            classInterval = ""
 
-        classTdtags = findInstancesOfTextBetweenText(classHtml, '<td>', '</td>') 
-        
-        classStatus = classTdtags[0].strip()
-        classActivity = classTdtags[2].strip()
-        classTerm = classTdtags[3].strip()
-        if len(classTerm) > 1:
+        classDays = str(classInfo[6].string)
+        classDays = classDays.split(' ')
+        classDays.pop(0)
+
+        classStart = classInfo[7].string
+        classEnd = classInfo[8].string
+        classComments = classInfo[9]
+        classInPersonAttendance = classInfo[10].string.strip() == 'Yes'
+
+        if classComments:
+            classComments = classComments.get_text()
+            classComments = classComments[20:]
+
+        if len(classTerm) == 3:
             classTerm = 3
         else:
             classTerm = int(classTerm)
-
-        classDelivery = classTdtags[4].strip()
-
-        if classStatus != "Cancelled":
-
-            classInterval = classTdtags[5].strip()
-            classDays = classTdtags[6].strip().split(" ")
-            classStart = classTdtags[7].strip()
-            classEnd = classTdtags[8].strip()
-
-            classComments = findTextBetweenText(classHtml, '<div class=\'accordion-inner\'>', '</p></div>')
-            if classComments: 
-                classComments = re.sub('<[^>]+>', ' ', classComments)
-
-            classInPersonAttendance = classTdtags[9].strip() == "Yes"
-
-            if fulldetails:
-                classCodeDetails = classSection.split(' ')
-                classJsonToAdd = fromSectionPullDetails(classCodeDetails[0], classCodeDetails[1], classCodeDetails[2], campus)
 
         classJson = {
             "section": classSection,
@@ -321,7 +360,10 @@ def fromCoursePullSections(subjectCode, courseCode, campus, fulldetails = False)
             "inPersonAttendance": classInPersonAttendance
         }
 
-        if classJsonToAdd:
+        classJsonToAdd = {}
+        if fulldetails:
+            classCodeDetails = classSection.split(' ')
+            classJsonToAdd = fromSectionPullDetails(classCodeDetails[0], classCodeDetails[1], classCodeDetails[2], campus)
             classJson.update(classJsonToAdd)
 
         classJsonList += [classJson]

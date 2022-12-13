@@ -16,7 +16,7 @@ Because the data is being scraped on call, I highly suggest using the method nar
 
 /campusSubjects/campus=UBCO
 
-Returns a list of all subjects offered at the campus specficed where each subject is defined as follows:
+Returns a list of all subjects offered at the campus specified where each subject is defined as follows:
 
 ```json
 {

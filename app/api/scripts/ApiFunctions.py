@@ -1,6 +1,5 @@
 import requests
 import re
-import html
 from app.api.scripts.UtilFunctions import *
 from bs4 import BeautifulSoup
 

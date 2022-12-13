@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM python:3.9-slim-buster
+FROM python:3.8-slim-buster
 
 EXPOSE 5000/tcp
 
@@ -12,4 +12,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD [ "python", "./run.py"]
+CMD [ "python", "./main.py"]

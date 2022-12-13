@@ -1,3 +1,9 @@
 *.pyc
 app/api/__pycache__/__init__.cpython-39.pyc
 app/api/scripts/__pycache__/ApiFunctions.cpython-39.pyc
+testApi.py
+testFunctions.py
+testFunctionUBCV.py
+gunicorn_config.py
+Procfile
+runtime.txt

@@ -1,4 +1,3 @@
-import requests
 import urllib3
 import re
 from app.api.scripts.UtilFunctions import *

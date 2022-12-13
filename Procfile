@@ -1,1 +1,1 @@
-web: gunicorn wsgi:app
+web: gunicorn ubc_api.main

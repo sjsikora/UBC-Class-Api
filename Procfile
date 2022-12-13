@@ -1,1 +1,1 @@
-web: gunicorn ubc_api.main
+web: gunicorn main

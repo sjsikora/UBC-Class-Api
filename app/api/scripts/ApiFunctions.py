@@ -1,4 +1,5 @@
 import requests
+import urllib3
 import re
 from app.api.scripts.UtilFunctions import *
 from bs4 import BeautifulSoup
@@ -15,11 +16,9 @@ def fromCampusPullSubjects(campus):
             'error': "Invaild Campus in function fromCampusPullSubjects."
         }
 
-    session = requests.session()
-    page = requests.get(url)
-    soup = BeautifulSoup(page.text, 'html.parser')
-    session.close()
-
+    http = urllib3.PoolManager()
+    page = http.request('GET', url)
+    soup = BeautifulSoup(page.data, 'html.parser')
 
     subjectsHtmlList = soup.find_all('tr')
     subjectsHtmlList.pop(0)
@@ -71,9 +70,9 @@ def fromSubjectPullCourses(subjectCode, campus, fulldetails = False):
             'error': "Invaild Campus in function fromSubjectPullCourses."
         }
 
-    session = requests.session()
-    page = session.get(url)
-    soup = BeautifulSoup(page.text, 'html.parser')
+    http = urllib3.PoolManager()
+    page = http.request('GET', url)
+    soup = BeautifulSoup(page.data, 'html.parser')
 
     courseHtmlList = soup.find_all('tr')
     courseHtmlList.pop(0)
@@ -97,9 +96,7 @@ def fromSubjectPullCourses(subjectCode, campus, fulldetails = False):
         tdTags = courseHtml.find_all('td')
 
         if len(courseHtml) <= 1:
-            session.close()
             return courseJsonList
-
 
         courseCode = tdTags[0].string
         courseTitle = tdTags[1].string
@@ -110,9 +107,16 @@ def fromSubjectPullCourses(subjectCode, campus, fulldetails = False):
                 "title": courseTitle
             }
         else:
-            courseUrl = "https://courses.students.ubc.ca" + courseHtml.find('a').get('href')
-            coursePage = session.get(courseUrl)
-            courseSoup = BeautifulSoup(coursePage.text, 'html.parser')
+
+            courseCodeList = courseCode.split(' ')
+
+            if campus == 'UBCO':
+                courseUrl = f'https://courses.students.ubc.ca/cs/courseschedule?tname=subj-course&course={courseCodeList[1]}&campuscd=UBCO&dept={courseCodeList[0]}&pname=subjarea'
+            elif campus == 'UBCV':
+                courseUrl = f'https://courses.students.ubc.ca/cs/courseschedule?tname=subj-course&course={courseCodeList[1]}&campuscd=UBO&dept={courseCodeList[0]}&pname=subjarea'
+
+            coursePage = http.request('GET', courseUrl)
+            courseSoup = BeautifulSoup(coursePage.data, 'html.parser')
 
             coursePTags = courseSoup.find_all('p')
 
@@ -131,7 +135,6 @@ def fromSubjectPullCourses(subjectCode, campus, fulldetails = False):
 
         courseJsonList += [courseJson]
 
-    session.close()
     return courseJsonList
 
 def fromSectionPullDetails(subjectCode, courseCode, sectionCode, campus):
@@ -146,8 +149,9 @@ def fromSectionPullDetails(subjectCode, courseCode, sectionCode, campus):
             'error': "Invaild Campus in function fromSectionPullDetails."
         }
 
-    page = requests.get(url)
-    soup = BeautifulSoup(page.text, 'html.parser')
+    http = urllib3.PoolManager()
+    page = http.request('GET', url)
+    soup = BeautifulSoup(page.data, 'html.parser')
 
     #Per Section    
     sectionTerm: int = 0
@@ -290,8 +294,9 @@ def fromCoursePullSections(subjectCode, courseCode, campus, fulldetails = False)
             'error': "Invaild Campus in function fromCoursePullSections."
         }
 
-    page = requests.get(url)
-    soup = BeautifulSoup(page.text, 'html.parser')
+    http = urllib3.PoolManager()
+    page = http.request('GET', url)
+    soup = BeautifulSoup(page.data, 'html.parser')
 
     mainHtml = soup.find_all('table')
 

@@ -7,3 +7,4 @@ testFunctionUBCV.py
 gunicorn_config.py
 Procfile
 runtime.txt
+app/api/scripts/__pycache__/ApiFunctions.cpython-39.pyc

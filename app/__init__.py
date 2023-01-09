@@ -7,6 +7,5 @@ def createApp():
 
     app.register_blueprint(apiBP)
     app.register_blueprint(pageBP)
-    
     return app
 

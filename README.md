@@ -1,6 +1,11 @@
+
+# NOTE:
+
+This project has since been dropped in accord with UBC's CWL terms of service.
+
 # UBC Class API
 
-This project is an API built off Flask, run on AWS with the purpose of turning UBC (Vancouver and Okanagan) class data into readable JSON files. I have plans to create a degreee helper off this website, yet as I build the front end, I wanted to launch for API for any uses others may have.
+This project is an API built off Flask, run on ... with the purpose of turning UBC (Vancouver and Okanagan) class data into readable JSON files. I have plans to create a degreee helper off this website, yet as I build the front end, I wanted to launch for API for any uses others may have.
 
 ## The API acceptes these following methods:
 

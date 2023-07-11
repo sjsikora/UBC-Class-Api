@@ -1,5 +1,5 @@
 
-# NOTE:
+# DEPRECATED
 
 This project has since been dropped in accord with UBC's CWL terms of service.
 
